@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VocabularyProject">
         <activity
+            android:name=".StudyView"
+            android:exported="true" />
+        <activity
+            android:name=".FileOpen"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
