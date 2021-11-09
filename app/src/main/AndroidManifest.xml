@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VocabularyProject">
         <activity
+            android:name=".FavorityWord"
+            android:exported="true" />
+        <activity
             android:name=".TestVIew"
             android:exported="true" />
         <activity
