@@ -10,13 +10,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VocabularyProject">
         <activity
+            android:name=".TestVIew"
+            android:exported="true" />
+        <activity
+            android:name=".SelectLanguage"
+            android:exported="true" />
+        <activity
+            android:name=".TestWordChapter"
+            android:exported="true" />
+        <activity
+            android:name=".settingView"
+            android:exported="true" />
+        <activity
+            android:name=".privateWordStudyView"
+            android:exported="true" />
+        <activity
+            android:name=".privateWordAdd"
+            android:exported="true" />
+        <activity
+            android:name=".SelectChapter"
+            android:exported="true" />
+        <activity
             android:name=".StudyView"
             android:exported="true" />
         <activity
             android:name=".FileOpen"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".StartView"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
