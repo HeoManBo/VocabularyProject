@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ViewPager viewPager = findViewById(R.id.pager);
-        com.example.voca_project.pager_adapter adapter = new com.example.voca_project.pager_adapter(getSupportFragmentManager());
+        com.example.vocabularyproject.pager_adapter adapter = new com.example.vocabularyproject.pager_adapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
     }
 }
