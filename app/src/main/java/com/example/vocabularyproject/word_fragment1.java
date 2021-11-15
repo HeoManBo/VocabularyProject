@@ -7,58 +7,33 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link word_fragment1#newInstance} factory method to
+ * Use the {@link word_fragment1#} factory method to
  * create an instance of this fragment.
  */
 public class word_fragment1 extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public word_fragment1() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment word_fragment1.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static word_fragment1 newInstance(String param1, String param2) {
-        word_fragment1 fragment = new word_fragment1();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    ViewGroup viewGroup;
+    TextView word, mean, Example;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_word1, container, false);
+        viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_word1,container,false);
+        word = viewGroup.findViewById(R.id.Word);
+        mean = viewGroup.findViewById(R.id.mean);
+        Example = viewGroup.findViewById(R.id.Example);
+        Bundle bundle = getArguments(); //ViewPager가 전달한 Bundle 인자 수신
+        ArrayList<String[]> arr = (ArrayList<String[]>) bundle.getSerializable("word");
+        word.setText(arr.get(0)[1]);
+        mean.setText(arr.get(0)[2]);
+        Example.setText(arr.get(0)[3]);
+
+
+        return viewGroup;
     }
 }

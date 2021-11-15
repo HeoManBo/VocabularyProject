@@ -34,10 +34,7 @@
             android:name=".SelectChapter"
             android:exported="true" />
         <activity
-            android:name=".StudyView"
-            android:exported="true" />
-        <activity
-            android:name=".FileOpen"
+            android:name=".word_pager"
             android:exported="true" />
         <activity
             android:name=".StartView"
