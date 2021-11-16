@@ -13,9 +13,6 @@ import java.util.ArrayList;
 
 import android.speech.tts.TextToSpeech;
 import android.widget.Button;
-import androidx.annotation.RequiresApi;
-import android.os.Build;
-import static android.speech.tts.TextToSpeech.ERROR;
 import java.util.Locale;
 
 /**
@@ -23,43 +20,76 @@ import java.util.Locale;
  * Use the {@link word_fragment1#} factory method to
  * create an instance of this fragment.
  */
-public class word_fragment1 extends Fragment {
+public class word_fragment1 extends Fragment implements View.OnClickListener, TextToSpeech.OnInitListener {
     ViewGroup viewGroup;
     TextView word, mean, Example;
-    TextToSpeech tts;
     Button speak;
+    TextToSpeech tts;
+    String text;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_word1, container, false);
+        viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_word1,container,false);
         word = viewGroup.findViewById(R.id.Word);
         mean = viewGroup.findViewById(R.id.mean);
         Example = viewGroup.findViewById(R.id.Example);
         speak = (Button) viewGroup.findViewById(R.id.sound);
-        speak.setEnabled(false);
-        speak.setOnClickListener(this);
         Bundle bundle = getArguments(); //ViewPager가 전달한 Bundle 인자 수신
         ArrayList<String[]> arr = (ArrayList<String[]>) bundle.getSerializable("word");
         word.setText(arr.get(0)[1]);
         mean.setText(arr.get(0)[2]);
         Example.setText(arr.get(0)[3]);
 
-        tts = new TextToSpeech(this, this);
 
+        speak.setEnabled(false);
+        speak.setOnClickListener(this);
+        text = arr.get(0)[1];
 
-        speak.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-            @Override
-            public void onClick(View view) {
-                CharSequence text = arr.get(0)[1];
-                tts.setPitch(1.0f);
-                tts.setSpeechRate(1.0f);
-                tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "word1");
-            }
-        });
+        tts = new TextToSpeech(getActivity(), this);
 
         return viewGroup;
     }
+
+    private void Speak() {
+        tts.setPitch(1.0f);
+        tts.setSpeechRate(1.0f);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "id1");
+    }
+
+    @Override
+    public void onInit(int status) {
+        if (status == TextToSpeech.SUCCESS) {
+            int language = tts.setLanguage(Locale.ENGLISH);
+            if (language == TextToSpeech.LANG_NOT_SUPPORTED || language == TextToSpeech.LANG_MISSING_DATA) {
+                speak.setEnabled(false);
+            }
+            else {
+                speak.setEnabled(true);
+            }
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.sound :
+                Speak();
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if(tts != null) {
+            tts.stop();
+            tts.shutdown();
+            tts = null;
+        }
+    }
+
 }
