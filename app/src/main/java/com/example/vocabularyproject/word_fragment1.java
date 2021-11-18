@@ -20,6 +20,7 @@ import java.util.Locale;
  * Use the {@link word_fragment1#} factory method to
  * create an instance of this fragment.
  */
+
 public class word_fragment1 extends Fragment implements View.OnClickListener, TextToSpeech.OnInitListener {
     ViewGroup viewGroup;
     TextView word, mean, Example;

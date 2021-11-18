@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "VocabularyProject"
 include ':app'
+include ':example_book'
