@@ -1,35 +1,33 @@
-package com.example.vocabularyproject;
+package com.example.vocabularyproject.chap01;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.vocabularyproject.FileSplit;
+import com.example.vocabularyproject.R;
 
 import java.util.ArrayList;
 
 //Chapter를 Viewpager 방식으로 보여줌
 
-public class word_pager extends AppCompatActivity {
-    static Context mContext; //fileSplit에서 사용할 context getResource를 위해
+public class wordpager extends AppCompatActivity {
     FileSplit fs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewpager);
-        mContext = this;
 //      chap activity에서 chapter 선택시 가져올 word.text 가져올 때 사용
 //      Intent intent = getIntent();
 //      intent.getBundleExtra("word");
 
-        fs = new FileSplit(R.raw.test); //test데이터를 읽어옴
+        fs = new FileSplit(R.raw.chap01); //test데이터를 읽어옴
 
         ViewPager2 viewPager = findViewById(R.id.pager); //ViewPager를 얻음
         MystateAdapter adapter = new MystateAdapter(this); //ViewPager Adapter 생성

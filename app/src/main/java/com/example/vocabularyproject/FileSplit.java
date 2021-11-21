@@ -3,7 +3,6 @@ package com.example.vocabularyproject;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
 
 /* RAW에 있는 WORD 파일을 읽어서 저장하는 함수
    RAW파일안에는 한 줄당 : 토큰 단위로 단어,뜻,예문이 분리되어 있음   */
@@ -12,7 +11,7 @@ public class FileSplit implements Serializable {
     public ArrayList<String[]> voca = new ArrayList<String[]>(); //text에 있는 문장을 한줄 단위로 받을 리스트
 
     public FileSplit(int FileID) {
-        InputStream inputS = word_pager.mContext.getResources().openRawResource(FileID); //Raw파일에 있는 fileID를 얻음
+        InputStream inputS = SelectChapter.mContext.getResources().openRawResource(FileID); //Raw파일에 있는 fileID를 얻음
         try{
             byte data[] = new byte[inputS.available()]; //byte화 된 string을 string으로 바꾸는 작업
             inputS.read(data);

@@ -40,9 +40,18 @@
         android:id="@+id/sound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/mean"
+        android:layout_alignBaseline="@+id/Word"
         android:layout_marginLeft="40dp"
-        android:layout_toRightOf="@+id/mean"
+        android:layout_toRightOf="@+id/Word"
         android:text="sound" />
+    <TextView
+        android:id="@+id/sentence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Example"
+        android:layout_centerHorizontal="true"
+        android:text="한글 풀이" />
+
+
 
 </RelativeLayout>

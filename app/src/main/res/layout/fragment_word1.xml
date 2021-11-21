@@ -4,11 +4,13 @@
     android:layout_height="match_parent">
 
 
-    <Button
+    <ToggleButton
+        android:id = "@+id/star"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text = "즐겨찾기 "/>
+        android:textOn = "추가완료"
+        android:textOff = "즐겨찾기 단어추가"/>
 
     <TextView
         android:id = "@+id/Word"
@@ -34,15 +36,23 @@
         android:layout_below="@+id/mean"
         android:layout_centerHorizontal="true"
         android:paddingTop="100dp"
-        android:text = "예문" />
+        android:text="예문" />
+
+    <TextView
+        android:id="@+id/sentence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Example"
+        android:layout_centerHorizontal="true"
+        android:text="한글 풀이" />
 
     <Button
         android:id="@+id/sound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/mean"
+        android:layout_alignBaseline="@+id/Word"
         android:layout_marginLeft="40dp"
-        android:layout_toRightOf="@+id/mean"
+        android:layout_toRightOf="@+id/Word"
         android:text="sound" />
 
 </RelativeLayout>

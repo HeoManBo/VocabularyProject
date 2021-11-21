@@ -34,8 +34,8 @@
             android:name=".SelectChapter"
             android:exported="true" />
         <activity
-            android:name=".word_pager"
-            android:exported="true" />
+            android:name=".chap01.wordpager"
+            android:exported="true"/>
         <activity
             android:name=".StartView"
             android:exported="true">

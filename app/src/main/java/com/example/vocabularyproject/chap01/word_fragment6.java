@@ -1,4 +1,4 @@
-package com.example.vocabularyproject;
+package com.example.vocabularyproject.chap01;
 
 import android.os.Bundle;
 
@@ -13,6 +13,9 @@ import java.util.ArrayList;
 
 import android.speech.tts.TextToSpeech;
 import android.widget.Button;
+
+import com.example.vocabularyproject.R;
+
 import java.util.Locale;
 
 /**
@@ -20,9 +23,9 @@ import java.util.Locale;
  * Use the {@link word_fragment1#} factory method to
  * create an instance of this fragment.
  */
-public class word_fragment13 extends Fragment implements View.OnClickListener, TextToSpeech.OnInitListener {
+public class word_fragment6 extends Fragment implements View.OnClickListener, TextToSpeech.OnInitListener {
     ViewGroup viewGroup;
-    TextView word, mean, Example;
+    TextView word, mean, Example,sentence;
     Button speak;
     TextToSpeech tts;
     String text;
@@ -37,14 +40,17 @@ public class word_fragment13 extends Fragment implements View.OnClickListener, T
         speak = (Button) viewGroup.findViewById(R.id.sound);
         Bundle bundle = getArguments(); //ViewPager가 전달한 Bundle 인자 수신
         ArrayList<String[]> arr = (ArrayList<String[]>) bundle.getSerializable("word");
-        word.setText(arr.get(12)[1]);
-        mean.setText(arr.get(12)[2]);
-        Example.setText(arr.get(12)[3]);
+        word.setText(arr.get(5)[1]);
+        mean.setText(arr.get(5)[2]);
+        Example.setText(arr.get(5)[3]);
+
+        sentence = viewGroup.findViewById(R.id.sentence);
+        sentence.setText(arr.get(5)[4]);
 
 
         speak.setEnabled(false);
         speak.setOnClickListener(this);
-        text = arr.get(12)[1];
+        text = arr.get(5)[1];
 
         tts = new TextToSpeech(getActivity(), this);
 
