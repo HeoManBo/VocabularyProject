@@ -7,10 +7,12 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.vocabularyproject.FileSplit;
 import com.example.vocabularyproject.R;
+import com.example.vocabularyproject.lock_screen_service;
 import com.example.vocabularyproject.word_fragment.word_fragment1;
 import com.example.vocabularyproject.word_fragment.word_fragment10;
 import com.example.vocabularyproject.word_fragment.word_fragment11;
@@ -53,6 +55,7 @@ public class wordpager_chap01 extends AppCompatActivity {
 
         viewPager.setAdapter(adapter); //Adapter 설정
         viewPager.setOffscreenPageLimit(15);
+
 
     }
 }
