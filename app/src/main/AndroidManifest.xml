@@ -34,7 +34,12 @@
             android:name=".SelectChapter"
             android:exported="true" />
         <activity
-            android:name=".chap01.wordpager"
+            android:launchMode="singleTop"
+            android:name=".wordpager.wordpager_chap01"
+            android:exported="true"/>
+        <activity
+            android:launchMode="singleTop"
+            android:name=".wordpager.wordpager_chap02"
             android:exported="true"/>
         <activity
             android:name=".StartView"

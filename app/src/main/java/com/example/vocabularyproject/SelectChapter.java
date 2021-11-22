@@ -12,7 +12,7 @@ import android.widget.Button;
 public class SelectChapter extends AppCompatActivity implements View.OnClickListener {
 
     static Context mContext ; //fileSplit에서 사용할 context getResource를 위해
-    Button chap01;
+    Button chap01,chap02;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,17 +21,28 @@ public class SelectChapter extends AppCompatActivity implements View.OnClickList
         mContext = this;
         chap01 = findViewById(R.id.chap01);
         chap01.setOnClickListener(this);
+        chap02 = findViewById(R.id.chap02);
+        chap02.setOnClickListener(this);
     }
 
 
     @Override
     public void onClick(View view){
+        Intent intent = new Intent();
+        ComponentName name = null;
         switch (view.getId()){
             case R.id.chap01:
-                Intent intent = new Intent();
-                intent.setComponent(new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.chap01.wordpager"));
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap01");
+                intent.setComponent(name);
+                intent.putExtra("chap02","chap02");
                 startActivity(intent);
-            break;
+                break;
+            case R.id.chap02:
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap02");
+                intent.setComponent(name);
+                intent.putExtra("chap02","chap02");
+                startActivity(intent);
+                break;
         }
     }
 }
