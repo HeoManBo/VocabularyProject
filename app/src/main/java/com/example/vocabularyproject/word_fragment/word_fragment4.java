@@ -26,7 +26,7 @@ import java.util.Locale;
 public class word_fragment4 extends Fragment implements View.OnClickListener, TextToSpeech.OnInitListener {
     ViewGroup viewGroup;
     TextView word, mean, Example,sentence;
-    Button speak;
+    Button speak,star;
     TextToSpeech tts;
     String text;
 
@@ -34,6 +34,7 @@ public class word_fragment4 extends Fragment implements View.OnClickListener, Te
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_word1,container,false);
+        star = viewGroup.findViewById(R.id.star04);
         word = viewGroup.findViewById(R.id.Word);
         mean = viewGroup.findViewById(R.id.mean);
         Example = viewGroup.findViewById(R.id.Example);

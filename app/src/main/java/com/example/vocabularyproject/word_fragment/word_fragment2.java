@@ -13,7 +13,9 @@ import java.util.ArrayList;
 
 import android.speech.tts.TextToSpeech;
 import android.widget.Button;
+import android.widget.Toast;
 
+import com.example.vocabularyproject.FavorityWord;
 import com.example.vocabularyproject.R;
 
 import java.util.Locale;
@@ -26,26 +28,29 @@ import java.util.Locale;
 public class word_fragment2 extends Fragment implements View.OnClickListener, TextToSpeech.OnInitListener {
     ViewGroup viewGroup;
     TextView word, mean, Example,sentence;
-    Button speak;
+    Button speak, star;
     TextToSpeech tts;
     String text;
+
+    ArrayList<String[]> arr;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_word1,container,false);
+        star = viewGroup.findViewById(R.id.star02);
         word = viewGroup.findViewById(R.id.Word);
         mean = viewGroup.findViewById(R.id.mean);
         Example = viewGroup.findViewById(R.id.Example);
         speak = (Button) viewGroup.findViewById(R.id.sound);
         Bundle bundle = getArguments(); //ViewPager가 전달한 Bundle 인자 수신
-        ArrayList<String[]> arr = (ArrayList<String[]>) bundle.getSerializable("word");
+        arr = (ArrayList<String[]>) bundle.getSerializable("word");
         word.setText(arr.get(1)[1]);
         mean.setText(arr.get(1)[2]);
-        Example.setVisibility(View.INVISIBLE);
+        Example.setText(arr.get(1)[3]);
 
         sentence = viewGroup.findViewById(R.id.sentence);
-        sentence.setVisibility(View.INVISIBLE);
+        sentence.setText(arr.get(1)[4]);
 
         speak.setEnabled(false);
         speak.setOnClickListener(this);
@@ -81,7 +86,6 @@ public class word_fragment2 extends Fragment implements View.OnClickListener, Te
             case R.id.sound :
                 Speak();
                 break;
-
             default:
                 break;
         }

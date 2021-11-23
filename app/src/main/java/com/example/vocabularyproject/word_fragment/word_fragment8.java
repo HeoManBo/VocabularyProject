@@ -26,7 +26,7 @@ import java.util.Locale;
 public class word_fragment8 extends Fragment implements View.OnClickListener, TextToSpeech.OnInitListener {
     ViewGroup viewGroup;
     TextView word, mean, Example,sentence;
-    Button speak;
+    Button speak,star;
     TextToSpeech tts;
     String text;
 
@@ -36,6 +36,7 @@ public class word_fragment8 extends Fragment implements View.OnClickListener, Te
         viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_word1,container,false);
         word = viewGroup.findViewById(R.id.Word);
         mean = viewGroup.findViewById(R.id.mean);
+        star = viewGroup.findViewById(R.id.star08);
         Example = viewGroup.findViewById(R.id.Example);
         speak = (Button) viewGroup.findViewById(R.id.sound);
         Bundle bundle = getArguments(); //ViewPager가 전달한 Bundle 인자 수신

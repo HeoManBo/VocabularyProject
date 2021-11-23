@@ -5,10 +5,12 @@
 
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/star07"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_centerHorizontal="true"
-        android:text = "즐겨찾기 "/>
+        android:background="@drawable/btn_star_off_normal"
+        android:padding="0dp" />
 
     <TextView
         android:id = "@+id/Word"
