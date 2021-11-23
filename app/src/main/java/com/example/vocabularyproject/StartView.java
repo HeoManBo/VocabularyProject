@@ -26,6 +26,10 @@ public class StartView extends AppCompatActivity {
         private_add_learning = findViewById(R.id.private_word_add);
         end = findViewById(R.id.end);
         setting = findViewById(R.id.setting);
+
+        Intent intent = new Intent(getApplicationContext(), lock_screen_service.class);
+        startService(intent);
+
     }
 
     public void onClick(View view){ //각 버튼 클릭시 이동

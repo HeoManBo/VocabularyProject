@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VocabularyProject">
+
+        <receiver android:name=".lock_screen_receiver"></receiver>
+        <service android:name=".lock_screen_service"></service>
+        <activity android:name=".lock_screen"></activity>
+
         <activity
             android:name=".FavorityWord"
             android:exported="true" />
@@ -50,6 +55,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
     </application>
 
 </manifest>
