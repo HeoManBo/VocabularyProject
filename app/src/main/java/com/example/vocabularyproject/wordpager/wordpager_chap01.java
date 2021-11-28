@@ -7,12 +7,12 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
+import com.example.vocabularyproject.FavorityWord;
 import com.example.vocabularyproject.FileSplit;
 import com.example.vocabularyproject.R;
-import com.example.vocabularyproject.lock_screen_service;
 import com.example.vocabularyproject.word_fragment.word_fragment1;
 import com.example.vocabularyproject.word_fragment.word_fragment10;
 import com.example.vocabularyproject.word_fragment.word_fragment11;
@@ -30,11 +30,14 @@ import com.example.vocabularyproject.word_fragment.word_fragment8;
 import com.example.vocabularyproject.word_fragment.word_fragment9;
 
 import java.util.ArrayList;
+import com.example.vocabularyproject.myFavorityDB;
 
 //Chapter를 Viewpager 방식으로 보여줌
 
 public class wordpager_chap01 extends AppCompatActivity {
-    FileSplit fs;
+    private FileSplit fs;
+
+    public myFavorityDB DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +52,17 @@ public class wordpager_chap01 extends AppCompatActivity {
         ViewPager2 viewPager = findViewById(R.id.pager); //ViewPager를 얻음
         com.example.vocabularyproject.wordpager.MystateAdapter adapter = new com.example.vocabularyproject.wordpager.MystateAdapter(this); //ViewPager Adapter 생성
 
+
+        DB = new myFavorityDB(this);
+        SQLiteDatabase db = DB.getWritableDatabase();
+
+
         Bundle bundle = new Bundle(); //voca List 전달
         bundle.putSerializable("word",fs.voca);
         adapter.putWord(bundle);
 
         viewPager.setAdapter(adapter); //Adapter 설정
         viewPager.setOffscreenPageLimit(15);
-
 
     }
 }
