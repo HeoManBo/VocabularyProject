@@ -12,8 +12,7 @@
 
         <receiver android:name=".lock_screen_receiver"></receiver>
         <service android:name=".lock_screen_service"></service>
-        <activity android:name=".lock_screen"></activity>
-
+        <activity android:name=".lock_screen"/>
         <activity
             android:name=".FavorityWord"
             android:exported="true" />
@@ -40,7 +39,7 @@
             android:exported="true" />
         <activity
             android:launchMode="singleTop"
-            android:name=".wordpager.wordpager_chap01"
+            android:name=".word_fragment.wordpager_chap01"
             android:exported="true"/>
         <activity
             android:launchMode="singleTop"

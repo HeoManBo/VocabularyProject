@@ -54,7 +54,7 @@ public class SelectChapter extends AppCompatActivity implements View.OnClickList
         ComponentName name = null;
         switch (view.getId()){
             case R.id.chap01:
-                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap01");
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.word_fragment.wordpager_chap01");
                 intent.setComponent(name);
                 intent.putExtra("chap01","chap01");
                 startActivity(intent);
@@ -66,7 +66,7 @@ public class SelectChapter extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 break;
             case R.id.chap03:
-                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap01");
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.word_fragment.wordpager_chap01");
                 intent.setComponent(name);
                 intent.putExtra("chap03","chap03");
                 startActivity(intent);
@@ -78,7 +78,7 @@ public class SelectChapter extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 break;
             case R.id.chap05:
-                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap01");
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.word_fragment.wordpager_chap01");
                 intent.setComponent(name);
                 intent.putExtra("chap05","chap05");
                 startActivity(intent);
@@ -90,7 +90,7 @@ public class SelectChapter extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 break;
             case R.id.chap07:
-                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap01");
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.word_fragment.wordpager_chap01");
                 intent.setComponent(name);
                 intent.putExtra("chap07","chap07");
                 startActivity(intent);
@@ -102,13 +102,20 @@ public class SelectChapter extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 break;
             case R.id.chap09:
-                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap01");
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.word_fragment.wordpager_chap01");
                 intent.setComponent(name);
                 intent.putExtra("chap09","chap09");
                 startActivity(intent);
                 break;
             case R.id.chap10:
                 name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap02");
+                intent.setComponent(name);
+                intent.putExtra("chap10","chap10");
+                startActivity(intent);
+                break;
+
+            case R.id.star_select:
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.FavorityWord");
                 intent.setComponent(name);
                 intent.putExtra("chap10","chap10");
                 startActivity(intent);

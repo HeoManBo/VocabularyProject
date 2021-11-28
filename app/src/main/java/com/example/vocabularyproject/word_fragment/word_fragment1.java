@@ -1,6 +1,7 @@
 package com.example.vocabularyproject.word_fragment;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -40,10 +41,11 @@ public class word_fragment1 extends Fragment implements View.OnClickListener, Te
     ArrayList<String[]> arr;
     Cursor cursor;
 
-
     String dbFilename = "word_Table";
     boolean i = false;
+    boolean on_off;
 
+    private SharedPreferences appData;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -55,6 +57,9 @@ public class word_fragment1 extends Fragment implements View.OnClickListener, Te
         speak = (Button) viewGroup.findViewById(R.id.sound);
         star = viewGroup.findViewById(R.id.star01);
         star.setOnClickListener(this);
+
+        appData = getActivity().getSharedPreferences("appdata", Context.MODE_PRIVATE);
+        btn_load();
 
         Bundle bundle = getArguments(); //ViewPager가 전달한 Bundle 인자 수신
         arr = (ArrayList<String[]>) bundle.getSerializable("word");
@@ -68,8 +73,6 @@ public class word_fragment1 extends Fragment implements View.OnClickListener, Te
 
         speak.setEnabled(false);
         speak.setOnClickListener(this);
-
-
 
         text = arr.get(0)[1];
         tts = new TextToSpeech(getActivity(), this);
@@ -106,16 +109,20 @@ public class word_fragment1 extends Fragment implements View.OnClickListener, Te
            myFavorityDB DB = new myFavorityDB(getActivity());
            SQLiteDatabase sqLiteDatabase = DB.getWritableDatabase();
             if(i == false){
+                i = true;
+                btn_save();
                 star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_on_normal));
                 Toast.makeText(getActivity(),"단어 추가 완료!",Toast.LENGTH_SHORT).show();
                 sqLiteDatabase.execSQL("insert into word_Table (word,word_class) values (?,?)", new String[]{arr.get(0)[1],arr.get(0)[2]});
-                i = true;
             }
-            else{ //삭제 기능은 나중에 구현
-                star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_off_normal));
+            else{
                 i = false;
+                btn_delete();
+                star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_off_normal));
+                Toast.makeText(getActivity(),"단어 삭제 완료!",Toast.LENGTH_SHORT).show();
+                favorityDB = new myFavorityDB(getActivity());
+                favorityDB.Delete(arr.get(0)[1]);
             }
-            sqLiteDatabase.close();
         }
     }
     @Override
@@ -128,19 +135,28 @@ public class word_fragment1 extends Fragment implements View.OnClickListener, Te
         }
     }
 
-    private boolean isIn(SQLiteDatabase db,Cursor cursor){ //현재 단어가 이미 즐겨찾기 되어있는지
-        String word;
-        cursor = db.rawQuery("select word from word_Table order by _id desc ",null);
-        cursor.moveToFirst();
-        while(cursor.moveToNext()){
-            word = cursor.getString(0);
-            Log.i("ABC",word);
-            if(word.equals(arr.get(0)[1])){
-                Toast.makeText(getActivity(),"이미 존재하는 단어입니다.",Toast.LENGTH_SHORT).show();
-                return true;
+    public void btn_save(){ 
+        SharedPreferences.Editor editor = appData.edit();
+        editor.putBoolean("on_off", i);
+        editor.apply();
+    }
+
+    public void btn_load(){
+        if(appData != null) {
+            i = appData.getBoolean("on_off", false);
+            if(i == true) {
+                star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_on_normal));
+            }
+            else{
+                star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_off_normal));
             }
         }
-        return false;
+    }
+
+    public void btn_delete(){
+        SharedPreferences.Editor editor = appData.edit();
+        editor.remove("on_off");
+        editor.apply();
     }
 
 }

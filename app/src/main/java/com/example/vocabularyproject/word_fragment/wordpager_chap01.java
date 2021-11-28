@@ -1,4 +1,4 @@
-package com.example.vocabularyproject.wordpager;
+package com.example.vocabularyproject.word_fragment;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.example.vocabularyproject.FavorityWord;
 import com.example.vocabularyproject.FileSplit;
@@ -31,6 +33,7 @@ import com.example.vocabularyproject.word_fragment.word_fragment9;
 
 import java.util.ArrayList;
 import com.example.vocabularyproject.myFavorityDB;
+import com.example.vocabularyproject.wordpager.MystateAdapter;
 
 //Chapter를 Viewpager 방식으로 보여줌
 
@@ -50,7 +53,7 @@ public class wordpager_chap01 extends AppCompatActivity {
         fs = new FileSplit(R.raw.chap01); //test데이터를 읽어옴
 
         ViewPager2 viewPager = findViewById(R.id.pager); //ViewPager를 얻음
-        com.example.vocabularyproject.wordpager.MystateAdapter adapter = new com.example.vocabularyproject.wordpager.MystateAdapter(this); //ViewPager Adapter 생성
+        MystateAdapter adapter = new MystateAdapter(this);
 
 
         DB = new myFavorityDB(this);
@@ -64,5 +67,8 @@ public class wordpager_chap01 extends AppCompatActivity {
         viewPager.setAdapter(adapter); //Adapter 설정
         viewPager.setOffscreenPageLimit(15);
 
+
+
     }
+
 }

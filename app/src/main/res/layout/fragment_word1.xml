@@ -53,6 +53,6 @@
         android:layout_alignBaseline="@+id/Word"
         android:layout_marginLeft="40dp"
         android:layout_toRightOf="@+id/Word"
-        android:text="sound" />
+        android:background="@drawable/sound_icon"/>
 
 </RelativeLayout>
