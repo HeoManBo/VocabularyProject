@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class MystateAdapter extends FragmentStateAdapter { //Viewpager를 연결해주는 fragement adapter
     private ArrayList<Fragment> fragments;
 
-    MystateAdapter(FragmentActivity fa){
+    public MystateAdapter(FragmentActivity fa){
         super(fa);
         fragments = new ArrayList<>();
         fragments.add(new com.example.vocabularyproject.word_fragment.word_fragment1());
