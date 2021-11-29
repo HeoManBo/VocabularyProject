@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.example.vocabularyproject.wordpager.wordpager_chap01;
+import com.example.vocabularyproject.wordpager.wordpager_chap02;
 
 public class lock_screen_receiver extends BroadcastReceiver {
     @Override

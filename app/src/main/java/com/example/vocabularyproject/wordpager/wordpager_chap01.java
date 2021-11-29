@@ -1,4 +1,4 @@
-package com.example.vocabularyproject.word_fragment;
+package com.example.vocabularyproject.wordpager;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -66,8 +66,6 @@ public class wordpager_chap01 extends AppCompatActivity {
 
         viewPager.setAdapter(adapter); //Adapter 설정
         viewPager.setOffscreenPageLimit(15);
-
-
 
     }
 

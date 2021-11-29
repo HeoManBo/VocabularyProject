@@ -46,7 +46,7 @@ public class wordpager_chap02 extends AppCompatActivity {
         fs = new FileSplit(R.raw.chap02); //test데이터를 읽어옴
 
         ViewPager2 viewPager = findViewById(R.id.pager); //ViewPager를 얻음
-        com.example.vocabularyproject.wordpager.MystateAdapter adapter = new com.example.vocabularyproject.wordpager.MystateAdapter(this); //ViewPager Adapter 생성
+        MystateAdapter adapter = new MystateAdapter(this); //ViewPager Adapter 생성
 
 
         Bundle bundle = new Bundle(); //voca List 전달

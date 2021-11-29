@@ -39,11 +39,27 @@
             android:exported="true" />
         <activity
             android:launchMode="singleTop"
-            android:name=".word_fragment.wordpager_chap01"
+            android:name=".wordpager.wordpager_chap01"
             android:exported="true"/>
         <activity
             android:launchMode="singleTop"
             android:name=".wordpager.wordpager_chap02"
+            android:exported="true"/>
+       <activity android:name=".wordpager.wordpager_chap03"
+           android:exported="true"/>
+        <activity android:name=".wordpager.wordpager_chap04"
+            android:exported="true"/>
+        <activity android:name=".wordpager.wordpager_chap05"
+            android:exported="true"/>
+        <activity android:name=".wordpager.wordpager_chap06"
+            android:exported="true"/>
+        <activity android:name=".wordpager.wordpager_chap07"
+            android:exported="true"/>
+        <activity android:name=".wordpager.wordpager_chap08"
+            android:exported="true"/>
+        <activity android:name=".wordpager.wordpager_chap09"
+            android:exported="true"/>
+        <activity android:name=".wordpager.wordpager_chap10"
             android:exported="true"/>
         <activity
             android:name=".StartView"

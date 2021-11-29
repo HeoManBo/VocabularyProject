@@ -54,7 +54,7 @@ public class SelectChapter extends AppCompatActivity implements View.OnClickList
         ComponentName name = null;
         switch (view.getId()){
             case R.id.chap01:
-                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.word_fragment.wordpager_chap01");
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap01");
                 intent.setComponent(name);
                 intent.putExtra("chap01","chap01");
                 startActivity(intent);
@@ -66,49 +66,49 @@ public class SelectChapter extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 break;
             case R.id.chap03:
-                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.word_fragment.wordpager_chap01");
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap03");
                 intent.setComponent(name);
                 intent.putExtra("chap03","chap03");
                 startActivity(intent);
                 break;
             case R.id.chap04:
-                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap02");
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap04");
                 intent.setComponent(name);
                 intent.putExtra("chap04","chap04");
                 startActivity(intent);
                 break;
             case R.id.chap05:
-                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.word_fragment.wordpager_chap01");
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap05");
                 intent.setComponent(name);
                 intent.putExtra("chap05","chap05");
                 startActivity(intent);
                 break;
             case R.id.chap06:
-                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap02");
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap06");
                 intent.setComponent(name);
                 intent.putExtra("chap06","chap06");
                 startActivity(intent);
                 break;
             case R.id.chap07:
-                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.word_fragment.wordpager_chap01");
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap07");
                 intent.setComponent(name);
                 intent.putExtra("chap07","chap07");
                 startActivity(intent);
                 break;
             case R.id.chap08:
-                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap02");
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap08");
                 intent.setComponent(name);
                 intent.putExtra("chap08","chap08");
                 startActivity(intent);
                 break;
             case R.id.chap09:
-                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.word_fragment.wordpager_chap01");
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap09");
                 intent.setComponent(name);
                 intent.putExtra("chap09","chap09");
                 startActivity(intent);
                 break;
             case R.id.chap10:
-                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap02");
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.wordpager.wordpager_chap10");
                 intent.setComponent(name);
                 intent.putExtra("chap10","chap10");
                 startActivity(intent);

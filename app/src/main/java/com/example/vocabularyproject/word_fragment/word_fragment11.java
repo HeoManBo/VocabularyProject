@@ -45,7 +45,6 @@ public class word_fragment11 extends Fragment implements View.OnClickListener, T
     boolean i = false;
     boolean on_off;
 
-    private SharedPreferences appData;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -58,8 +57,7 @@ public class word_fragment11 extends Fragment implements View.OnClickListener, T
         star = viewGroup.findViewById(R.id.star01);
         star.setOnClickListener(this);
 
-        appData = getActivity().getSharedPreferences("appdata", Context.MODE_PRIVATE);
-        btn_load();
+
 
         Bundle bundle = getArguments(); //ViewPager가 전달한 Bundle 인자 수신
         arr = (ArrayList<String[]>) bundle.getSerializable("word");
@@ -70,6 +68,7 @@ public class word_fragment11 extends Fragment implements View.OnClickListener, T
         sentence = viewGroup.findViewById(R.id.sentence);
         sentence.setText(arr.get(10)[4]);
 
+        btn_load();
 
         speak.setEnabled(false);
         speak.setOnClickListener(this);
@@ -110,14 +109,12 @@ public class word_fragment11 extends Fragment implements View.OnClickListener, T
             SQLiteDatabase sqLiteDatabase = DB.getWritableDatabase();
             if(i == false){
                 i = true;
-                btn_save();
                 star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_on_normal));
                 Toast.makeText(getActivity(),"단어 추가 완료!",Toast.LENGTH_SHORT).show();
                 sqLiteDatabase.execSQL("insert into word_Table (word,word_class) values (?,?)", new String[]{arr.get(10)[1],arr.get(10)[2]});
             }
             else{
                 i = false;
-                btn_delete();
                 star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_off_normal));
                 Toast.makeText(getActivity(),"단어 삭제 완료!",Toast.LENGTH_SHORT).show();
                 favorityDB = new myFavorityDB(getActivity());
@@ -135,28 +132,15 @@ public class word_fragment11 extends Fragment implements View.OnClickListener, T
         }
     }
 
-    public void btn_save(){
-        SharedPreferences.Editor editor = appData.edit();
-        editor.putBoolean("on_off_11", i);
-        editor.apply();
-    }
-
     public void btn_load(){
-        if(appData != null) {
-            i = appData.getBoolean("on_off_11", false);
-            if(i == true) {
-                star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_on_normal));
-            }
-            else{
-                star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_off_normal));
-            }
+        myFavorityDB DB = new myFavorityDB(getActivity());
+        if(DB.isIn(arr.get(11)[1])){
+            star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_on_normal));
+            i = true;
+        }
+        else{
+            star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_off_normal));
+            i = false;
         }
     }
-
-    public void btn_delete(){
-        SharedPreferences.Editor editor = appData.edit();
-        editor.remove("on_off_11");
-        editor.apply();
-    }
-
 }

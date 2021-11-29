@@ -2,6 +2,7 @@ package com.example.vocabularyproject;
 
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -10,6 +11,7 @@ public class myFavorityDB extends SQLiteOpenHelper {
 
     final SQLiteDatabase db = getWritableDatabase();
     static final String DBname = "word_Table"; //DB이름
+    Cursor cursor;
 
     //myFavorityDB 생성자
     public myFavorityDB(Context context){
@@ -44,6 +46,17 @@ public class myFavorityDB extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         db.delete("word_Table","word = ?",new String[]{word});
         db.close();
+    }
+
+    public boolean isIn(String word) {
+        SQLiteDatabase database = getReadableDatabase();
+        cursor = database.rawQuery("select word from word_Table order by _id desc limit 1", null);
+        while (cursor.moveToNext()) {
+            if (cursor.getString(0).equals(word)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
