@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
@@ -48,12 +50,19 @@ public class word_fragment9 extends Fragment implements View.OnClickListener, Te
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_word1,container,false);
-        word = viewGroup.findViewById(R.id.Word);
-        mean = viewGroup.findViewById(R.id.mean);
-        Example = viewGroup.findViewById(R.id.Example);
-        speak = (Button) viewGroup.findViewById(R.id.sound);
-        star = viewGroup.findViewById(R.id.star01);
+        return inflater.inflate(R.layout.fragment_word9, container,false);
+    }
+
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
+        super.onViewCreated(view, savedInstanceState);
+
+        word = view.findViewById(R.id.Word);
+        mean = view.findViewById(R.id.mean);
+        Example = view.findViewById(R.id.Example);
+        speak = (Button) view.findViewById(R.id.sound);
+        star = view.findViewById(R.id.star09);
         star.setOnClickListener(this);
 
         Bundle bundle = getArguments(); //ViewPager가 전달한 Bundle 인자 수신
@@ -62,11 +71,12 @@ public class word_fragment9 extends Fragment implements View.OnClickListener, Te
         mean.setText(arr.get(8)[2]);
         Example.setText(arr.get(8)[3]);
 
-        sentence = viewGroup.findViewById(R.id.sentence);
+        //버튼의 상태를 가져오는 함수
+        btn_load();
+
+        sentence = view.findViewById(R.id.sentence);
         sentence.setText(arr.get(8)[4]);
 
-
-        btn_load();
 
         speak.setEnabled(false);
         speak.setOnClickListener(this);
@@ -74,7 +84,6 @@ public class word_fragment9 extends Fragment implements View.OnClickListener, Te
         text = arr.get(0)[1];
         tts = new TextToSpeech(getActivity(), this);
 
-        return viewGroup;
     }
 
     private void Speak() {
