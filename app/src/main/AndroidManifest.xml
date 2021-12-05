@@ -62,6 +62,32 @@
         <activity android:name=".wordpager.wordpager_chap10"
             android:exported="true"/>
         <activity
+            android:launchMode="singleTop"
+            android:name=".lock_screen_pager.lock_screen_pager01"
+            android:exported="true"/>
+        <activity
+            android:launchMode="singleTop"
+            android:name=".lock_screen_pager.lock_screen_pager02"
+            android:exported="true"/>
+        <activity android:name=".lock_screen_pager.lock_screen_pager03"
+            android:exported="true"/>
+        <activity android:name=".lock_screen_pager.lock_screen_pager04"
+            android:exported="true"/>
+        <activity android:name=".lock_screen_pager.lock_screen_pager05"
+            android:exported="true"/>
+        <activity android:name=".lock_screen_pager.lock_screen_pager06"
+            android:exported="true"/>
+        <activity android:name=".lock_screen_pager.lock_screen_pager07"
+            android:exported="true"/>
+        <activity android:name=".lock_screen_pager.lock_screen_pager08"
+            android:exported="true"/>
+        <activity android:name=".lock_screen_pager.lock_screen_pager09"
+            android:exported="true"/>
+        <activity android:name=".lock_screen_pager.lock_screen_pager10"
+            android:exported="true"/>
+
+
+        <activity
             android:name=".StartView"
             android:exported="true">
             <intent-filter>
