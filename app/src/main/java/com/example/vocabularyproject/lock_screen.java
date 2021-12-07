@@ -61,7 +61,7 @@ public class lock_screen extends AppCompatActivity {
         com.example.vocabularyproject.lock_screen_pager.lock_screen_adapter adapter = new com.example.vocabularyproject.lock_screen_pager.lock_screen_adapter(this); //ViewPager Adapter 생성
 
         Bundle bundle = new Bundle(); //voca List 전달
-        bundle.putSerializable("word",fs.voca);
+        bundle.putSerializable("word",fs.getVoca());
         adapter.putWord(bundle);
 
         viewPager.setAdapter(adapter); //Adapter 설정

@@ -10,8 +10,8 @@ public class FileSplit implements Serializable {
 
     public ArrayList<String[]> voca = new ArrayList<String[]>(); //text에 있는 문장을 한줄 단위로 받을 리스트
 
-    public FileSplit(int FileID) {
-        InputStream inputS = SelectChapter.mContext.getResources().openRawResource(FileID); //Raw파일에 있는 fileID를 얻음
+    public FileSplit(int num) {
+        InputStream inputS = StartView.mContext.getResources().openRawResource(R.raw.chap01 + num - 1); //Raw파일에 있는 fileID를 얻음
         try{
             byte data[] = new byte[inputS.available()]; //byte화 된 string을 string으로 바꾸는 작업
             inputS.read(data);
@@ -22,6 +22,20 @@ public class FileSplit implements Serializable {
             e.printStackTrace();
         }
     }
+
+    public void FileSplit_Korea(int num) { //한국어가 첫번째로 오게 설정
+        InputStream inputS = SelectChapter.mContext.getResources().openRawResource(R.raw.chap01 + num - 1); //Raw파일에 있는 fileID를 얻음
+        try{
+            byte data[] = new byte[inputS.available()]; //byte화 된 string을 string으로 바꾸는 작업
+            inputS.read(data);
+            inputS.close();
+            String str = new String(data,"UTF-8");
+            MakeArray(str); //String 으로 만든 txt파일을 정한 형식으로 저장함
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public void MakeArray(String str){
         String tmp[] = str.split("\n"); //enter단위로 문장을 쪼개어 저장
         String s;
@@ -30,5 +44,9 @@ public class FileSplit implements Serializable {
             String tmp2[] = s.split(":"); //:단위로 쪼갠 string을
             voca.add(tmp2); //리스트에 저장함
         }
+    }
+
+    public ArrayList<String[]> getVoca() {
+        return voca;
     }
 }
