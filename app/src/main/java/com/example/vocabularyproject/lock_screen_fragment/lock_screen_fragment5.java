@@ -38,8 +38,8 @@ public class lock_screen_fragment5 extends Fragment {
 
         Bundle bundle = getArguments(); //ViewPager가 전달한 Bundle 인자 수신
         arr = (ArrayList<String[]>) bundle.getSerializable("word");
-        word.setText(arr.get(0)[1]);
-        mean.setText(arr.get(0)[2]);
+        word.setText(arr.get(4)[1]);
+        mean.setText(arr.get(4)[2]);
 
     }
 }
