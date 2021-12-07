@@ -75,28 +75,54 @@
             android:name=".wordpager.wordpager_chap10"
             android:exported="true" />
         <activity
-            android:launchMode="singleTop"
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
             android:name=".lock_screen_pager.lock_screen_pager01"
             android:exported="true"/>
         <activity
-            android:launchMode="singleTop"
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
             android:name=".lock_screen_pager.lock_screen_pager02"
             android:exported="true"/>
-        <activity android:name=".lock_screen_pager.lock_screen_pager03"
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager03"
             android:exported="true"/>
-        <activity android:name=".lock_screen_pager.lock_screen_pager04"
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager04"
             android:exported="true"/>
-        <activity android:name=".lock_screen_pager.lock_screen_pager05"
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager05"
             android:exported="true"/>
-        <activity android:name=".lock_screen_pager.lock_screen_pager06"
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager06"
             android:exported="true"/>
-        <activity android:name=".lock_screen_pager.lock_screen_pager07"
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager07"
             android:exported="true"/>
-        <activity android:name=".lock_screen_pager.lock_screen_pager08"
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager08"
             android:exported="true"/>
-        <activity android:name=".lock_screen_pager.lock_screen_pager09"
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager09"
             android:exported="true"/>
-        <activity android:name=".lock_screen_pager.lock_screen_pager10"
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager10"
             android:exported="true"/>
 
 

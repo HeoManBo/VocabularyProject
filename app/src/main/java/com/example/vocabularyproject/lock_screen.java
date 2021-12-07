@@ -24,34 +24,34 @@ public class lock_screen extends AppCompatActivity {
 
         switch(spref.getInt("index",0)+1) {
             case 1:
-                fs = new FileSplit(R.raw.chap01);
+                fs = new FileSplit(1);
                 break;
             case 2:
-                fs = new FileSplit(R.raw.chap02);
+                fs = new FileSplit(2);
                 break;
             case 3:
-                fs = new FileSplit(R.raw.chap03);
+                fs = new FileSplit(3);
                 break;
             case 4:
-                fs = new FileSplit(R.raw.chap04);
+                fs = new FileSplit(4);
                 break;
             case 5:
-                fs = new FileSplit(R.raw.chap05);
+                fs = new FileSplit(5);
                 break;
             case 6:
-                fs = new FileSplit(R.raw.chap06);
+                fs = new FileSplit(6);
                 break;
             case 7:
-                fs = new FileSplit(R.raw.chap07);
+                fs = new FileSplit(7);
                 break;
             case 8:
-                fs = new FileSplit(R.raw.chap08);
+                fs = new FileSplit(8);
                 break;
             case 9:
-                fs = new FileSplit(R.raw.chap09);
+                fs = new FileSplit(9);
                 break;
             case 10:
-                fs = new FileSplit(R.raw.chap10);
+                fs = new FileSplit(10);
                 break;
         }
 
