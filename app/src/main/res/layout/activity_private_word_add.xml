@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".privateWordAdd">
+    android:orientation = "vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "개인 단어 추가하기"
+        android:gravity = "center"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/word"
+        android:layout_height="wrap_content"
+        android:privateImeOptions="defaultInputmode=english"
+        android:hint = "영어단어 입력"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/mean"
+        android:layout_height="wrap_content"
+        android:privateImeOptions="defaultInputmode=korean"
+        android:hint = "단어의 뜻 입력"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/pos"
+        android:layout_height="wrap_content"
+        android:privateImeOptions="defaultInputmode=korean"
+        android:hint = "품사 입력"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/ex"
+        android:layout_height="wrap_content"
+        android:privateImeOptions="defaultInputmode=english"
+        android:hint = "예문 입력"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/exMean"
+        android:layout_height="wrap_content"
+        android:privateImeOptions="defaultInputmode=korean"
+        android:hint = "예문의 해석 입력"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add"
+        android:layout_centerHorizontal = "true"
+        android:layout_alignParentBottom = "true"
+        android:text = "추가"/>
+
+</LinearLayout>
