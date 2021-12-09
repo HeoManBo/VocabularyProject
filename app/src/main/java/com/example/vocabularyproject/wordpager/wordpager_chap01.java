@@ -46,11 +46,8 @@ public class wordpager_chap01 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewpager);
-//      chap activity에서 chapter 선택시 가져올 word.text 가져올 때 사용
-//      Intent intent = getIntent();
-//      intent.getBundleExtra("word");
 
-        fs = new FileSplit(R.raw.chap01); //test데이터를 읽어옴
+        fs = new FileSplit(1);
 
         ViewPager2 viewPager = findViewById(R.id.pager); //ViewPager를 얻음
         MystateAdapter adapter = new MystateAdapter(this);
@@ -61,7 +58,7 @@ public class wordpager_chap01 extends AppCompatActivity {
 
 
         Bundle bundle = new Bundle(); //voca List 전달
-        bundle.putSerializable("word",fs.voca);
+        bundle.putSerializable("word",fs.getVoca());
         adapter.putWord(bundle);
 
         viewPager.setAdapter(adapter); //Adapter 설정

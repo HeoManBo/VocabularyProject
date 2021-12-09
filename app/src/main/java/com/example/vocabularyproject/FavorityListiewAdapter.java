@@ -2,6 +2,7 @@ package com.example.vocabularyproject;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -75,19 +76,19 @@ public class FavorityListiewAdapter extends RecyclerView.Adapter<FavorityListiew
 
         private TextView wordText;
         private TextView meanText;
-        private Button del_btn;
+        private TextView text;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             wordText = itemView.findViewById(R.id.favority_word);
-            meanText = itemView.findViewById(R.id.favority_mean);
-            del_btn = itemView.findViewById(R.id.delete_btn);
+            meanText = itemView.findViewById(R.id.favority_text);
+            text = itemView.findViewById(R.id.favority_mean);
         }
 
         void onBind(FavorityClass data){
             wordText.setText(data.getWord());
             meanText.setText(data.getMean());
-
+            text.setText(data.getSplit());
         }
     }
 }

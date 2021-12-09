@@ -43,14 +43,14 @@ public class wordpager_chap02 extends AppCompatActivity {
         Intent intent = getIntent();
         String chap02 = intent.getStringExtra("chap02");
 
-        fs = new FileSplit(R.raw.chap02); //test데이터를 읽어옴
+        fs = new FileSplit(2); //test데이터를 읽어옴
 
         ViewPager2 viewPager = findViewById(R.id.pager); //ViewPager를 얻음
         MystateAdapter adapter = new MystateAdapter(this); //ViewPager Adapter 생성
 
 
         Bundle bundle = new Bundle(); //voca List 전달
-        bundle.putSerializable("word",fs.voca);
+        bundle.putSerializable("word",fs.getVoca());
         adapter.putWord(bundle);
 
         viewPager.setAdapter(adapter); //Adapter 설정

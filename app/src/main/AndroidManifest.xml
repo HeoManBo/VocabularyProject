@@ -9,21 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VocabularyProject">
+        <activity
+            android:name=".TestView.test_pager.test_pager1"
+            android:exported="true" />
 
-        <receiver android:name=".lock_screen_receiver"></receiver>
-        <service android:name=".lock_screen_service"></service>
-        <activity android:name=".lock_screen"/>
+        <receiver android:name=".lock_screen_receiver" />
+
+        <service android:name=".lock_screen_service" />
+
+        <activity android:name=".lock_screen" />
         <activity
             android:name=".FavorityWord"
             android:exported="true" />
         <activity
-            android:name=".TestVIew"
+            android:name=".TestView.SelectLanguage"
             android:exported="true" />
         <activity
             android:name=".SelectLanguage"
             android:exported="true" />
         <activity
-            android:name=".TestWordChapter"
+            android:name=".TestView.TestWordChapter"
             android:exported="true" />
         <activity
             android:name=".settingView"
@@ -38,29 +43,89 @@
             android:name=".SelectChapter"
             android:exported="true" />
         <activity
-            android:launchMode="singleTop"
             android:name=".wordpager.wordpager_chap01"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".wordpager.wordpager_chap02"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".wordpager.wordpager_chap03"
+            android:exported="true" />
+        <activity
+            android:name=".wordpager.wordpager_chap04"
+            android:exported="true" />
+        <activity
+            android:name=".wordpager.wordpager_chap05"
+            android:exported="true" />
+        <activity
+            android:name=".wordpager.wordpager_chap06"
+            android:exported="true" />
+        <activity
+            android:name=".wordpager.wordpager_chap07"
+            android:exported="true" />
+        <activity
+            android:name=".wordpager.wordpager_chap08"
+            android:exported="true" />
+        <activity
+            android:name=".wordpager.wordpager_chap09"
+            android:exported="true" />
+        <activity
+            android:name=".wordpager.wordpager_chap10"
+            android:exported="true" />
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager01"
             android:exported="true"/>
         <activity
-            android:launchMode="singleTop"
-            android:name=".wordpager.wordpager_chap02"
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager02"
             android:exported="true"/>
-       <activity android:name=".wordpager.wordpager_chap03"
-           android:exported="true"/>
-        <activity android:name=".wordpager.wordpager_chap04"
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager03"
             android:exported="true"/>
-        <activity android:name=".wordpager.wordpager_chap05"
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager04"
             android:exported="true"/>
-        <activity android:name=".wordpager.wordpager_chap06"
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager05"
             android:exported="true"/>
-        <activity android:name=".wordpager.wordpager_chap07"
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager06"
             android:exported="true"/>
-        <activity android:name=".wordpager.wordpager_chap08"
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager07"
             android:exported="true"/>
-        <activity android:name=".wordpager.wordpager_chap09"
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager08"
             android:exported="true"/>
-        <activity android:name=".wordpager.wordpager_chap10"
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager09"
             android:exported="true"/>
+        <activity
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:name=".lock_screen_pager.lock_screen_pager10"
+            android:exported="true"/>
+
+
         <activity
             android:name=".StartView"
             android:exported="true">
@@ -70,8 +135,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>

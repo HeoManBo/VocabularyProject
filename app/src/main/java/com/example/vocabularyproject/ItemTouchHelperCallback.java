@@ -15,7 +15,7 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
     public int getMovementFlags(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder) {
         int drag_flags = ItemTouchHelper.UP|ItemTouchHelper.DOWN; //아이템을 위,아래로 드래그 하는 경우
         int swipe_flags = ItemTouchHelper.START|ItemTouchHelper.END;
-        return makeMovementFlags(0,swipe_flags);
+        return makeMovementFlags(drag_flags,swipe_flags);
     }
 
     @Override

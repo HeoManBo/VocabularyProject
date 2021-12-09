@@ -1,9 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TestWordChapter">
+    android:orientation="vertical"
+    android:rowCount="5"
+    android:columnCount="2"
+    android:alignmentMode="alignBounds"
+    android:layout_marginTop="100dp"
+    android:layout_marginLeft="70dp"
+    android:layout_gravity="center_horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id = "@+id/chap01_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "chap01"/>
+
+    <Button
+        android:id="@+id/chap02_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chap02"/>
+
+    <Button
+        android:id="@+id/chap03_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chap03"/>
+
+    <Button
+        android:id="@+id/chap04_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chap04"/>
+
+    <Button
+        android:id="@+id/chap05_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chap05"/>
+
+    <Button
+        android:id="@+id/chap06_test"
+        android:layout_marginLeft="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chap06"/>
+
+    <Button
+        android:id="@+id/chap07_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chap07"/>
+
+    <Button
+        android:id="@+id/chap08_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chap08"/>
+
+    <Button
+        android:id="@+id/chap09_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chap09"/>
+
+    <Button
+        android:id="@+id/chap10_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chap10"/>
+
+</GridLayout>

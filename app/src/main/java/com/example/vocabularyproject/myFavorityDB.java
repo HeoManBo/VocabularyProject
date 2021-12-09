@@ -42,12 +42,14 @@ public class myFavorityDB extends SQLiteOpenHelper {
         db.close();
     }
 
+    //삭제 메서드
     public void Delete(String word){
         SQLiteDatabase db = getWritableDatabase();
         db.delete("word_Table","word = ?",new String[]{word});
         db.close();
     }
 
+    //해당 단어가 DB에 있는지 확인하는 메소드
     public boolean isIn(String word) {
         SQLiteDatabase database = getReadableDatabase();
         cursor = database.rawQuery("select word from word_Table order by _id desc limit 1", null);
