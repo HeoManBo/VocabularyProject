@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment01"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/broad_back">
 
 
     <Button
@@ -10,33 +12,48 @@
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/btn_star_off_normal"
-        android:padding="0dp" />
+        android:layout_marginTop="40dp"/>
 
     <TextView
-        android:id = "@+id/Word"
+        android:id="@+id/Word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:paddingTop="200dp"
-        android:text = "영어 단어" />
+        android:textColor="@color/white"
+        android:text="영어 단어" />
 
     <TextView
         android:id="@+id/mean"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Word"
         android:layout_centerHorizontal="true"
-        android:paddingTop="100dp"
-        android:text="품사 : 한글 뜻" />
+        android:paddingTop="80dp"
+        android:textColor="@color/white"
+        android:text="품사 : 한글 뜻"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/Example"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/mean"
         android:layout_centerHorizontal="true"
-        android:paddingTop="100dp"
-        android:text = "예문" />
+        android:paddingTop="50dp"
+        android:textColor="@color/white"
+        android:text="예문"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/sentence"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Example"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="한글 풀이"
+        android:gravity="center"/>
 
     <Button
         android:id="@+id/sound"
@@ -45,15 +62,6 @@
         android:layout_alignBaseline="@+id/Word"
         android:layout_marginLeft="40dp"
         android:layout_toRightOf="@+id/Word"
-        android:text="sound" />
-    <TextView
-        android:id="@+id/sentence"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Example"
-        android:layout_centerHorizontal="true"
-        android:text="한글 풀이" />
-
-
+        android:background="@drawable/sound_icon"/>
 
 </RelativeLayout>

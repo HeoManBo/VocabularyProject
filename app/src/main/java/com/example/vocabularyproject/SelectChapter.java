@@ -120,6 +120,13 @@ public class SelectChapter extends AppCompatActivity implements View.OnClickList
                 intent.putExtra("chap10","chap10");
                 startActivity(intent);
                 break;
+
+            case R.id.private_word:
+                name = new ComponentName("com.example.vocabularyproject","com.example.vocabularyproject.privateWordStudyView");
+                intent.setComponent(name);
+                startActivity(intent);
+                break;
+
             default:
                 break;
         }

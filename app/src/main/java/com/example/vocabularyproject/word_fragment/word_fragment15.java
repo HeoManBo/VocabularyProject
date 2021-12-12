@@ -46,6 +46,8 @@ public class word_fragment15 extends Fragment implements View.OnClickListener, T
     String dbFilename = "word_Table";
     boolean i = false;
     boolean on_off;
+    float size = 20.0F;
+    SharedPreferences shpref;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -77,6 +79,13 @@ public class word_fragment15 extends Fragment implements View.OnClickListener, T
         sentence = view.findViewById(R.id.sentence);
         sentence.setText(arr.get(14)[4]);
 
+        //글자 크기 조절하는 기능
+        shpref = getActivity().getSharedPreferences("text_size",Context.MODE_PRIVATE);
+        size = shpref.getFloat("textsize",20.0F);
+        word.setTextSize(size);
+        mean.setTextSize(size);
+        Example.setTextSize(size);
+        sentence.setTextSize(size);
 
         speak.setEnabled(false);
         speak.setOnClickListener(this);
@@ -116,13 +125,13 @@ public class word_fragment15 extends Fragment implements View.OnClickListener, T
             SQLiteDatabase sqLiteDatabase = DB.getWritableDatabase();
             if(i == false){
                 i = true;
-                star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_on_normal));
+                star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.on));
                 Toast.makeText(getActivity(),"단어 추가 완료!",Toast.LENGTH_SHORT).show();
                 sqLiteDatabase.execSQL("insert into word_Table (word,word_class) values (?,?)", new String[]{arr.get(14)[1],arr.get(14)[2]});
             }
             else{
                 i = false;
-                star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_off_normal));
+                star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.off));
                 Toast.makeText(getActivity(),"단어 삭제 완료!",Toast.LENGTH_SHORT).show();
                 favorityDB = new myFavorityDB(getActivity());
                 favorityDB.Delete(arr.get(14)[1]);
@@ -142,11 +151,11 @@ public class word_fragment15 extends Fragment implements View.OnClickListener, T
     public void btn_load(){
         myFavorityDB DB = new myFavorityDB(getActivity());
         if(DB.isIn(arr.get(0)[1])){
-            star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_on_normal));
+            star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.on));
             i = true;
         }
         else{
-            star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_off_normal));
+            star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.off));
             i = false;
         }
     }

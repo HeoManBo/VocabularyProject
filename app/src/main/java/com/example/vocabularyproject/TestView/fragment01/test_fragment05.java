@@ -97,7 +97,6 @@ public class test_fragment05 extends Fragment {
                 } else if (myanswer.trim().equals(arr[2])) { //한국어로 제시된 문제를 맞췄을때
                     Toast toast = Toast.makeText(getActivity(), "정답입니다!", Toast.LENGTH_SHORT);
                     toast.show();
-                    answer.setVisibility(View.VISIBLE);
                 } else if (!myanswer.trim().equals(arr[2])) {
                     if (count == 0) { //첫 오답을 입력한 경우
                         Toast toast = Toast.makeText(getActivity(), "다시한번 생각해보세요!", Toast.LENGTH_SHORT);
