@@ -1,92 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:rowCount="6"
-    android:columnCount="2"
-    android:alignmentMode="alignBounds"
-    android:layout_marginTop="100dp"
-    android:layout_marginLeft="70dp"
-    android:layout_gravity="center_horizontal">
+    android:orientation="horizontal"
+    android:background="@drawable/broad_back">
 
-    <Button
-        android:id = "@+id/chap01"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text = "chap01"/>
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="100dp">
 
-    <Button
-        android:id="@+id/chap02"
+        <Button
+            android:id = "@+id/chap01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text = "chap01" />
+
+        <Button
+            android:id="@+id/chap02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="chap02"/>
+
+        <Button
+            android:id="@+id/chap03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="chap03"/>
+
+        <Button
+            android:id="@+id/chap04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="chap04"/>
+
+        <Button
+            android:id="@+id/chap05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="chap05"/>
+
+        <Button
+            android:id="@+id/star_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="즐겨찾기"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="chap02"/>
+        android:orientation="vertical"
+        android:layout_marginLeft="50dp"
+        android:layout_gravity="center">
 
-    <Button
-        android:id="@+id/chap03"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="chap03"/>
+        <Button
+            android:id="@+id/chap06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="chap06"/>
 
-    <Button
-        android:id="@+id/chap04"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="chap04"/>
+        <Button
+            android:id="@+id/chap07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="chap07"/>
 
-    <Button
-        android:id="@+id/chap05"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="chap05"/>
+        <Button
+            android:id="@+id/chap08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="chap08"/>
 
-    <Button
-        android:id="@+id/star_select"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="즐겨찾기"/>
+        <Button
+            android:id="@+id/chap09"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="chap09"/>
 
-    <Button
-        android:id="@+id/chap06"
-        android:layout_marginLeft="40dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="chap06"/>
+        <Button
+            android:id="@+id/chap10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="chap10"/>
 
-    <Button
-        android:id="@+id/chap07"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="chap07"/>
+        <Button
+            android:id="@+id/private_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="개인단어장"/>
 
-    <Button
-        android:id="@+id/chap08"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="chap08"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/chap09"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="chap09"/>
-
-    <Button
-        android:id="@+id/chap10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="chap10"/>
-
-    <Button
-        android:id="@+id/private_word"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="개인단어장"/>
-
-
-
-
-
-
-</GridLayout>
+</LinearLayout>

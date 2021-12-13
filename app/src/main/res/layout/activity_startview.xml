@@ -11,7 +11,7 @@
         android:text = "단어 암기"
         android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
-        android:onClick="onClick"/>
+        android:onClick="onClick" />
 
     <Button
         android:id = "@+id/Word_learning_test"

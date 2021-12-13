@@ -1,15 +1,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/fragment01"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/broad_back">
 
     <TextView
         android:id="@+id/word_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:textSize="40dp"
         android:paddingTop="70dp"
-        android:text="영어 단어" />
+        android:text="영어 단어"
+        android:textColor="@color/white"/>
 
 
     <EditText
@@ -20,7 +23,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:hint="정답을 입력하세요."
-        android:privateImeOptions="defaultInputmode=korean"/>
+        android:textColorHint="@color/white"
+        android:privateImeOptions="defaultInputmode=korean"
+        android:textCursorDrawable="@null"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/answer_btn"
@@ -41,7 +47,7 @@
         android:layout_below="@+id/input"
         android:text="정답"
         android:layout_centerInParent="true"
-        android:layout_marginTop="200dp" />
+        android:textColor="@color/white"/>
 
 
 </RelativeLayout>

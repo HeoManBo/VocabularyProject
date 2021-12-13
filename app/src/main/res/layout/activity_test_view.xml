@@ -2,15 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:background="@drawable/broad_back">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="문제를 볼 언어를 선택하세요."
         android:layout_above="@+id/btn_English"
-        android:layout_marginBottom="100dp"
-        android:layout_centerInParent="true"/>
+        android:layout_marginBottom="80dp"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        android:textColor="@color/white"/>
 
     <Button
         android:id ="@+id/btn_Korea"
@@ -25,9 +28,9 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btn_Korea"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="100dp"
-        android:text = "영어"
-        android:onClick="onClick"/>
+        android:onClick="onClick"
+        android:text="영어" />
 
 </RelativeLayout>
