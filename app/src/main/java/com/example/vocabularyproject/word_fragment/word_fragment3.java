@@ -33,10 +33,9 @@ import java.util.Locale;
 
 public class word_fragment3 extends Fragment implements View.OnClickListener, TextToSpeech.OnInitListener {
     TextView word, mean, Example,sentence;
-    Button speak;
     TextToSpeech tts;
     String text;
-    Button star;
+    ImageButton star, speak;
 
     myFavorityDB favorityDB;
     ArrayList<String[]> arr;
@@ -64,7 +63,7 @@ public class word_fragment3 extends Fragment implements View.OnClickListener, Te
         word = view.findViewById(R.id.Word);
         mean = view.findViewById(R.id.mean);
         Example = view.findViewById(R.id.Example);
-        speak = (Button) view.findViewById(R.id.sound);
+        speak = view.findViewById(R.id.sound);
         star = view.findViewById(R.id.star03);
         star.setOnClickListener(this);
 
