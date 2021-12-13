@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 
 public class lock_screen_fragment7 extends Fragment {
-    TextView word,mean;
+    TextView word,mean,Example;
     ArrayList<String[]> arr;
 
 
@@ -34,12 +34,13 @@ public class lock_screen_fragment7 extends Fragment {
 
         word = view.findViewById(R.id.Word);
         mean = view.findViewById(R.id.mean);
+        Example = view.findViewById(R.id.Example);
 
 
         Bundle bundle = getArguments(); //ViewPager가 전달한 Bundle 인자 수신
         arr = (ArrayList<String[]>) bundle.getSerializable("word");
         word.setText(arr.get(6)[1]);
         mean.setText(arr.get(6)[2]);
-
+        Example.setText(arr.get(6)[3]);
     }
 }

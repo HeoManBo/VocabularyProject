@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/fragment_lock_screen_fragment06"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/broad_back">
 
 
     <TextView
@@ -11,7 +12,19 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:paddingTop="200dp"
-        android:text="영어 단어" />
+        android:text="영어 단어"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/Example"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mean"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="50dp"
+        android:textColor="@color/white"
+        android:text="예문"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/mean"
@@ -20,7 +33,8 @@
         android:layout_below="@+id/Word"
         android:layout_centerHorizontal="true"
         android:paddingTop="100dp"
-        android:text="품사 : 한글 뜻" />
+        android:text="품사 : 한글 뜻"
+        android:textColor="@color/white"/>
 
 
 

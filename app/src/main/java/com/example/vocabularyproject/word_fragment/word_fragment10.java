@@ -151,11 +151,11 @@ public class word_fragment10 extends Fragment implements View.OnClickListener, T
     public void btn_load(){
         myFavorityDB DB = new myFavorityDB(getActivity());
         if(DB.isIn(arr.get(9)[1])){
-            star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_on_normal));
+            star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.on));
             i = true;
         }
         else{
-            star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.btn_star_off_normal));
+            star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.off));
             i = false;
         }
     }
