@@ -13,7 +13,8 @@
         android:layout_centerHorizontal="true"
         android:paddingTop="200dp"
         android:text="영어 단어"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textSize="30dp"/>
 
     <TextView
         android:id="@+id/Example"
@@ -24,7 +25,8 @@
         android:paddingTop="50dp"
         android:textColor="@color/white"
         android:text="예문"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:textSize="20dp"/>
 
     <TextView
         android:id="@+id/mean"
@@ -34,7 +36,8 @@
         android:layout_centerHorizontal="true"
         android:paddingTop="100dp"
         android:text="품사 : 한글 뜻"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textSize="30dp"/>
 
 
 
