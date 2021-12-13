@@ -32,20 +32,6 @@
         android:privateImeOptions="defaultInputmode=korean"
         android:hint = "품사 입력"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:id="@+id/ex"
-        android:layout_height="wrap_content"
-        android:privateImeOptions="defaultInputmode=english"
-        android:hint = "예문 입력"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:id="@+id/exMean"
-        android:layout_height="wrap_content"
-        android:privateImeOptions="defaultInputmode=korean"
-        android:hint = "예문의 해석 입력"/>
-
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

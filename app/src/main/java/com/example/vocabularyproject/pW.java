@@ -1,17 +1,17 @@
 package com.example.vocabularyproject;
 
 
+import android.graphics.drawable.Drawable;
+
 public class pW {
     private String word;
+    private String pos;
     private String mean;
-    private String ex;
-    private String exMean;
 
-    public pW(String word, String mean, String ex, String exMean) {
+    public pW(String word, String pos, String mean) {
         this.word = word;
+        this.pos = pos;
         this.mean = mean;
-        this.ex = ex;
-        this.exMean = exMean;
     }
 
     public String getWord() {
@@ -30,19 +30,11 @@ public class pW {
         this.mean = mean;
     }
 
-    public String getEx() {
-        return ex;
+    public String getPos() {
+        return pos;
     }
 
-    public void setEx(String ex) {
-        this.ex = ex;
-    }
-
-    public String getExMean() {
-        return exMean;
-    }
-
-    public void setExMean(String exMean) {
-        this.exMean = exMean;
+    public void setPos(String pos) {
+        this.pos = pos;
     }
 }

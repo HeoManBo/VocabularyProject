@@ -1,6 +1,5 @@
 package com.example.vocabularyproject;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 
@@ -42,10 +41,9 @@ public class privateWordAdapter extends BaseAdapter {
             holder = new ViewHolder();
 
             convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.private_word_list, parent, false);
-            holder.word = (TextView) convertView.findViewById(R.id.word);
-            holder.mean = (TextView) convertView.findViewById(R.id.mean);
-            holder.ex = (TextView) convertView.findViewById(R.id.ex);
-            holder.exMean = (TextView) convertView.findViewById(R.id.exMean);
+            holder.word = (TextView) convertView.findViewById(R.id.private_word);
+            holder.mean = (TextView) convertView.findViewById(R.id.private_mean);
+            holder.pos = (TextView) convertView.findViewById((R.id.private_pos));
 
             convertView.setTag(holder);
         }
@@ -56,18 +54,15 @@ public class privateWordAdapter extends BaseAdapter {
         pW pw = arr.get(position);
         holder.word.setText(pw.getWord());
         holder.mean.setText(pw.getMean());
-        holder.ex.setText(pw.getEx());
-        holder.exMean.setText(pw.getExMean());
-        Button delete = convertView.findViewById(R.id.delete);
+        holder.pos.setText(pw.getPos());
 
         return convertView;
     }
 
     static class ViewHolder {
         TextView word;
+        TextView pos;
         TextView mean;
-        TextView ex;
-        TextView exMean;
     }
 
 }
