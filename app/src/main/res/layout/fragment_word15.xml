@@ -6,12 +6,12 @@
     android:background="@drawable/broad_back">
 
 
-    <Button
+    <ImageButton
         android:id="@+id/star15"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/btn_star_off_normal"
+        android:background="@drawable/off"
         android:layout_marginTop="40dp"/>
 
     <TextView
@@ -54,13 +54,14 @@
         android:textColor="@color/white"
         android:text="한글 풀이"
         android:gravity="center"/>
-    <Button
+    <ImageButton
         android:id="@+id/sound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/Word"
         android:layout_marginLeft="40dp"
         android:layout_toRightOf="@+id/Word"
-        android:background="@drawable/sound_icon"/>
+        android:background="@drawable/sound_icon"
+        android:backgroundTint="@color/white"/>
 
 </RelativeLayout>
