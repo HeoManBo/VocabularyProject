@@ -66,6 +66,7 @@ public class test_fragment15 extends Fragment {
 
         problem.setText(arr[1]);
         answer.setVisibility(View.INVISIBLE);
+        answer.setText(arr[2]);
 
         btn.setOnClickListener(new View.OnClickListener() {
             int i;

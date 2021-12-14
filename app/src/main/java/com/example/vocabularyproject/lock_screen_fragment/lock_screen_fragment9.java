@@ -1,5 +1,7 @@
 package com.example.vocabularyproject.lock_screen_fragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -17,9 +19,11 @@ import java.util.ArrayList;
 
 public class lock_screen_fragment9 extends Fragment {
 
-    TextView word,mean,Example;
+    TextView word,mean,Example,sentence;
     ArrayList<String[]> arr;
+    SharedPreferences shpref;
 
+    float size = 20.0F;
 
 
     @Override
@@ -42,5 +46,15 @@ public class lock_screen_fragment9 extends Fragment {
         word.setText(arr.get(8)[1]);
         mean.setText(arr.get(8)[2]);
         Example.setText(arr.get(8)[3]);
+
+        sentence = view.findViewById(R.id.sentence);
+        sentence.setText(arr.get(8)[4]);
+
+        shpref = getActivity().getSharedPreferences("text_size", Context.MODE_PRIVATE);
+        size = shpref.getFloat("textsize",20.0F);
+        word.setTextSize(size);
+        mean.setTextSize(size);
+        Example.setTextSize(size);
+        sentence.setTextSize(size);
     }
 }

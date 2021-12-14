@@ -3,19 +3,30 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation = "vertical">
+    android:orientation="vertical"
+    android:background="@drawable/broad_back">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text = "개인 단어 추가하기"
-        android:gravity = "center"/>
+        android:textSize="20dp"
+        android:paddingTop="50dp"
+        android:paddingBottom="20dp"
+        android:textColor="@color/white"
+        android:gravity = "center"
+        android:textStyle="bold"/>
 
     <EditText
         android:layout_width="match_parent"
         android:id="@+id/word"
         android:layout_height="wrap_content"
         android:privateImeOptions="defaultInputmode=english"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"
         android:hint = "영어단어 입력"/>
 
     <EditText
@@ -23,6 +34,11 @@
         android:id="@+id/mean"
         android:layout_height="wrap_content"
         android:privateImeOptions="defaultInputmode=korean"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"
         android:hint = "단어의 뜻 입력"/>
 
     <EditText
@@ -30,6 +46,11 @@
         android:id="@+id/pos"
         android:layout_height="wrap_content"
         android:privateImeOptions="defaultInputmode=korean"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"
         android:hint = "품사 입력"/>
 
     <Button
@@ -37,7 +58,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/add"
         android:layout_centerHorizontal = "true"
-        android:layout_alignParentBottom = "true"
+        android:paddingTop="10dp"
         android:text = "추가"/>
 
 </LinearLayout>

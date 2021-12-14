@@ -36,6 +36,16 @@
         android:text="품사 : 한글 뜻"
         android:textColor="@color/white"/>
 
+    <TextView
+        android:id="@+id/sentence"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Example"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="한글 풀이"
+        android:gravity="center"/>
+
 
 
 </RelativeLayout>

@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".settingView">
+    tools:context=".settingView"
+    android:orientation="vertical"
+    android:background="@drawable/broad_back">
 
     <Switch
         android:id="@+id/lock_scr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:paddingLeft="30dp"
         android:text="잠금화면"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/white"
+        android:thumbTint="@color/white"
+        android:trackTint="@color/white"/>
 
 
     <TextView
@@ -21,61 +26,106 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:text="선택"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.376"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:visibility="invisible"
+        android:textColor="@color/white"/>
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginLeft="23dp"
         android:visibility="invisible"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lock_scr" />
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/white"/>
 
 
     <TextView
         android:id="@+id/btn_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingTop="100dp"
         android:layout_marginTop="24dp"
         android:text="크기 조절 버튼"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner" />
+        android:textColor="@color/white"/>
 
     <RadioGroup
         android:id="@+id/text_sizeGruop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        app:layout_constraintRight_toRightOf="@id/btn_size"
-        app:layout_constraintStart_toStartOf="@id/btn_size"
-        app:layout_constraintTop_toTopOf="@id/btn_size"
-        android:orientation="horizontal">
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:textColor="@color/white">
 
         <RadioButton
             android:id="@+id/text_small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="작게" />
+            android:text="작게"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"/>
 
         <RadioButton
             android:id="@+id/text_mid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="중간" />
+            android:text="중간"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"/>
 
         <RadioButton
             android:id="@+id/text_big"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="크게" />
+            android:text="크게"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"/>
 
     </RadioGroup>
 
+    <TextView
+        android:id="@+id/sound_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingTop="100dp"
+        android:layout_marginTop="24dp"
+        android:text="소리 조절 버튼"
+        android:textColor="@color/white"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RadioGroup
+    android:id="@+id/sound_sizeGruop"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:textColor="@color/white">
+
+    <RadioButton
+        android:id="@+id/sound_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="작게"
+        android:textColor="@color/white"
+        android:buttonTint="@color/white"/>
+
+    <RadioButton
+        android:id="@+id/sound_mid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="중간"
+        android:textColor="@color/white"
+        android:buttonTint="@color/white"/>
+
+    <RadioButton
+        android:id="@+id/sound_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="크게"
+        android:textColor="@color/white"
+        android:buttonTint="@color/white"/>
+
+</RadioGroup>
+
+
+</LinearLayout>

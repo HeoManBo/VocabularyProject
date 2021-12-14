@@ -91,6 +91,7 @@ public class test_fragment02 extends Fragment {
                             Toast.makeText(getActivity(), "오답입니다.", Toast.LENGTH_SHORT).show();
                             answer.setVisibility(View.VISIBLE);
                             count = 0;
+                            inputAnswer.setEnabled(false);
                             break;
                         }
                     }

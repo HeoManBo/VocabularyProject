@@ -33,8 +33,11 @@ import java.util.Locale;
 
 
 public class lock_screen_fragment1 extends Fragment {
-    TextView word,mean,Example;
+    TextView word,mean,Example,sentence;
     ArrayList<String[]> arr;
+    SharedPreferences shpref;
+
+    float size = 20.0F;
 
 
 
@@ -59,5 +62,14 @@ public class lock_screen_fragment1 extends Fragment {
         mean.setText(arr.get(0)[2]);
         Example.setText(arr.get(0)[3]);
 
+        sentence = view.findViewById(R.id.sentence);
+        sentence.setText(arr.get(0)[4]);
+
+        shpref = getActivity().getSharedPreferences("text_size",Context.MODE_PRIVATE);
+        size = shpref.getFloat("textsize",20.0F);
+        word.setTextSize(size);
+        mean.setTextSize(size);
+        Example.setTextSize(size);
+        sentence.setTextSize(size);
     }
 }
