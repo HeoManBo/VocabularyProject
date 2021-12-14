@@ -90,7 +90,7 @@ public class word_fragment13 extends Fragment implements View.OnClickListener, T
         speak.setEnabled(false);
         speak.setOnClickListener(this);
 
-        text = arr.get(0)[1];
+        text = arr.get(12)[1];
         tts = new TextToSpeech(getActivity(), this);
 
     }

@@ -68,15 +68,15 @@ public class word_fragment10 extends Fragment implements View.OnClickListener, T
 
         Bundle bundle = getArguments(); //ViewPager가 전달한 Bundle 인자 수신
         arr = (ArrayList<String[]>) bundle.getSerializable("word");
-        word.setText(arr.get(10)[1]);
-        mean.setText(arr.get(10)[2]);
-        Example.setText(arr.get(10)[3]);
+        word.setText(arr.get(9)[1]);
+        mean.setText(arr.get(9)[2]);
+        Example.setText(arr.get(9)[3]);
 
         //버튼의 상태를 가져오는 함수
         btn_load();
 
         sentence = view.findViewById(R.id.sentence);
-        sentence.setText(arr.get(10)[4]);
+        sentence.setText(arr.get(9)[4]);
 
         //글자 크기 조절하는 기능
         shpref = getActivity().getSharedPreferences("text_size",Context.MODE_PRIVATE);
@@ -90,7 +90,7 @@ public class word_fragment10 extends Fragment implements View.OnClickListener, T
         speak.setEnabled(false);
         speak.setOnClickListener(this);
 
-        text = arr.get(0)[1];
+        text = arr.get(9)[1];
         tts = new TextToSpeech(getActivity(), this);
 
     }

@@ -91,7 +91,7 @@ public class word_fragment3 extends Fragment implements View.OnClickListener, Te
         speak.setEnabled(false);
         speak.setOnClickListener(this);
 
-        text = arr.get(0)[1];
+        text = arr.get(2)[1];
         tts = new TextToSpeech(getActivity(), this);
 
     }
