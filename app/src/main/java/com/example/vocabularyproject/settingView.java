@@ -125,21 +125,21 @@ public class settingView extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if(i == R.id.sound_quiet){
                     setSoundVolume(20.0F);
-                    radio_BtnSizesave("soundVolume",1F);
+                    radio_BtnSizesave("soundVolume",0.0F);
                     radio_BtnStateSave("quiet",true);
                     radio_BtnStateSave("normal",false);
                     radio_BtnStateSave("loud",false);
                 }
-                else if(i == R.id.text_mid){
+                else if(i == R.id.sound_normal){
                     setSoundVolume(40.0F);
-                    radio_BtnSizesave("soundVolume",0.5F);
+                    radio_BtnSizesave("soundVolume",1.0F);
                     radio_BtnStateSave("quiet",false);
                     radio_BtnStateSave("normal",true);
                     radio_BtnStateSave("loud",false);
                 }
-                else if(i == R.id.text_big){
+                else if(i == R.id.sound_loud){
                     setSoundVolume(60.0F);
-                    radio_BtnSizesave("soundVolume",0F);
+                    radio_BtnSizesave("soundVolume",2.0F);
                     radio_BtnStateSave("quiet",false);
                     radio_BtnStateSave("normal",false);
                     radio_BtnStateSave("loud",true);
