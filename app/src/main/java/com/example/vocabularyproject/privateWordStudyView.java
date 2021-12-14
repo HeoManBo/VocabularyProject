@@ -1,11 +1,8 @@
 package com.example.vocabularyproject;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ListView;
 
 import java.io.BufferedReader;
@@ -18,7 +15,6 @@ public class privateWordStudyView extends AppCompatActivity {
     ListView listview;
     ArrayList<pW> arr;
     privateWordAdapter adapter;
-    public static Activity pWSV;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

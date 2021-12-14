@@ -1,5 +1,4 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
@@ -10,43 +9,78 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="100dp">
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
 
         <Button
             android:id = "@+id/chap01_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
             android:text = "chap01"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
 
         <Button
             android:id="@+id/chap02_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
             android:text="chap02"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
 
         <Button
             android:id="@+id/chap03_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
             android:text="chap03"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
 
         <Button
             android:id="@+id/chap04_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
             android:text="chap04"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
 
         <Button
             android:id="@+id/chap05_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
             android:text="chap05"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
 
     </LinearLayout>
 
@@ -55,42 +89,79 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="50dp">
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
         <Button
             android:id="@+id/chap06_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
             android:text="chap06"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
 
         <Button
             android:id="@+id/chap07_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
             android:text="chap07"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
 
         <Button
             android:id="@+id/chap08_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
             android:text="chap08"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
 
         <Button
             android:id="@+id/chap09_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
             android:text="chap09"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
 
         <Button
             android:id="@+id/chap10_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
             android:text="chap10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
 
     </LinearLayout>
 

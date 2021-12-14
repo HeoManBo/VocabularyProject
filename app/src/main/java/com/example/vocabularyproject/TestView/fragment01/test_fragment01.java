@@ -1,19 +1,13 @@
 package com.example.vocabularyproject.TestView.fragment01;
 
-import static android.content.Context.INPUT_METHOD_SERVICE;
-import static androidx.core.content.ContextCompat.getSystemService;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -21,7 +15,6 @@ import android.widget.Toast;
 
 import com.example.vocabularyproject.R;
 
-import java.util.ArrayList;
 import java.util.Locale;
 
 public class test_fragment01 extends Fragment {
@@ -84,18 +77,18 @@ public class test_fragment01 extends Fragment {
                         if (koreaSplit[i].equals(myanswer)) { //문제를 맞췄을 때
                             answer.setVisibility(View.VISIBLE);
                             answer.setText("전체 답은 : " + tmp);
-                            toast.setText("정답입니다!");
+                            Toast toast = Toast.makeText(getActivity(), "정답입니다!", Toast.LENGTH_SHORT);
                             toast.show();
                             break;
                         }
                         if (i == koreaSplit.length - 1 && !(koreaSplit[i].equals(myanswer))) { //첫 오답을 입력한 경우
-                            toast.setText("다시 한번 생각해보세요!");
+                            Toast toast = Toast.makeText(getActivity(), "다시 한번 생각해보세요!", Toast.LENGTH_SHORT);
                             toast.show();
                             count++;
                             continue;
                         }
                         if (count == 2) { //두번 오답을 입력한 경우
-                            toast.setText("오답입니다.");
+                            Toast toast = Toast.makeText(getActivity(), "오답입니다!", Toast.LENGTH_SHORT);
                             toast.show();
                             answer.setVisibility(View.VISIBLE);
                             count = 0;
@@ -103,18 +96,17 @@ public class test_fragment01 extends Fragment {
                         }
                     }
                 } else if (myanswer.trim().equals(arr[2])) { //한국어로 제시된 문제를 맞췄을때
-                    toast.setText("정답입니다!");
+                    Toast toast = Toast.makeText(getActivity(), "정답입니다!", Toast.LENGTH_SHORT);
                     toast.show();
                 } else if (!myanswer.trim().equals(arr[2])) {
                     if (count == 0) { //첫 오답을 입력한 경우
-                        toast.setText("다시 한번 생각해보세요!");
+                        Toast toast = Toast.makeText(getActivity(), "다시 한번 생각해보세요!", Toast.LENGTH_SHORT);
                         toast.show();
                         count++;
                     } else { //두번째 오답을 입력한 경우
-                        toast.setText("오답입니다.");
+                        Toast toast = Toast.makeText(getActivity(), "오답입니다!", Toast.LENGTH_SHORT);
                         toast.show();
                         answer.setVisibility(View.VISIBLE);
-                        inputAnswer.setEnabled(false);
                         count = 0;
                     }
                 }

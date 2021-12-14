@@ -36,7 +36,6 @@ public class word_fragment1 extends Fragment implements View.OnClickListener, Te
     myFavorityDB favorityDB;
     ArrayList<String[]> arr;
 
-    String dbFilename = "word_Table";
     boolean i = false;
     float size = 20.0F;
 

@@ -7,11 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 
 public class privateWordAdd extends AppCompatActivity {
 

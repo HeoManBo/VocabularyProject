@@ -11,12 +11,10 @@ import com.example.vocabularyproject.FileSplit;
 import com.example.vocabularyproject.R;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class SelectLanguage extends AppCompatActivity {
 
     Intent intent;
-    String str;
     FileSplit fs;
     int Chap;
     ArrayList<String[]> arr;

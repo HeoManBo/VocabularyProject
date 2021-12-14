@@ -85,7 +85,7 @@ public class test_fragment07 extends Fragment {
                             continue;
                         }
                         if (count == 2) { //두번 오답을 입력한 경우
-                            Toast.makeText(getActivity(), "오답입니다.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), "오답입니다!", Toast.LENGTH_SHORT).show();
                             answer.setVisibility(View.VISIBLE);
                             count = 0;
                             break;

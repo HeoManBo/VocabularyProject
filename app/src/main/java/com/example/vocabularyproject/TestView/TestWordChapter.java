@@ -13,7 +13,6 @@ import com.example.vocabularyproject.R;
 public class TestWordChapter extends AppCompatActivity implements View.OnClickListener {
 
     Button chap01, chap02, chap03, chap04, chap05, chap06, chap07, chap08, chap09, chap010;
-    String whatChap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -2,7 +2,6 @@ package com.example.vocabularyproject.word_fragment;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
@@ -11,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,18 +19,14 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import android.speech.tts.TextToSpeech;
-import android.widget.Button;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
-import com.example.vocabularyproject.FavorityWord;
 import com.example.vocabularyproject.R;
 import com.example.vocabularyproject.myFavorityDB;
 
 import java.util.Locale;
 
 public class word_fragment5 extends Fragment implements View.OnClickListener, TextToSpeech.OnInitListener {
-    ViewGroup viewGroup;
     TextView word, mean, Example,sentence;
     TextToSpeech tts;
     String text;
@@ -40,11 +34,8 @@ public class word_fragment5 extends Fragment implements View.OnClickListener, Te
 
     myFavorityDB favorityDB;
     ArrayList<String[]> arr;
-    Cursor cursor;
 
-    String dbFilename = "word_Table";
     boolean i = false;
-    boolean on_off;
     float size = 20.0F;
     SharedPreferences shpref;
 

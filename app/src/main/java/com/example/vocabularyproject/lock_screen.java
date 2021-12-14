@@ -7,8 +7,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.WindowManager;
-import com.example.vocabularyproject.FileSplit;
-import com.example.vocabularyproject.R;
 
 public class lock_screen extends AppCompatActivity {
     FileSplit fs;

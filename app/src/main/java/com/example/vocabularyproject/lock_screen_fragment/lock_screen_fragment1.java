@@ -2,34 +2,21 @@ package com.example.vocabularyproject.lock_screen_fragment;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import android.speech.tts.TextToSpeech;
-import android.widget.Button;
-import android.widget.Toast;
-import android.widget.ToggleButton;
-
-import com.example.vocabularyproject.FavorityWord;
 import com.example.vocabularyproject.R;
-import com.example.vocabularyproject.myFavorityDB;
 
-import java.util.Locale;
 
 
 public class lock_screen_fragment1 extends Fragment {
