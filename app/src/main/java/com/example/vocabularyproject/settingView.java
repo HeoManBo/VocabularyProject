@@ -18,16 +18,16 @@ import android.widget.TextView;
 
 public class settingView extends AppCompatActivity {
 
-    SharedPreferences spref, size_spref;
+    SharedPreferences spref;
     SharedPreferences.Editor editor;
     TextView select;
-    Spinner spinner, size_spinner;
+    Spinner spinner;
     Switch lock_scr;
     String[] items = {"CHAP01","CHAP02","CHAP03","CHAP04","CHAP05","CHAP06","CHAP07","CHAP08","CHAP09","CHAP10"};
-    float[] size_items = {20.0F, 40.0F,60.0F};
-    RadioGroup text_size;
+    RadioGroup text_size, sound_volume;
     RadioButton small,mid,big;
-    static float textSize;
+    RadioButton quiet, normal, loud;
+    static float textSize, soundVolume;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +39,20 @@ public class settingView extends AppCompatActivity {
         select = findViewById(R.id.select);
 
         text_size = findViewById(R.id.text_sizeGruop);
+        sound_volume = findViewById(R.id.sound_volume_group);
         small = findViewById(R.id.text_small);
         mid = findViewById(R.id.text_mid);
         big = findViewById(R.id.text_big);
+        quiet = findViewById(R.id.sound_quiet);
+        normal = findViewById(R.id.sound_normal);
+        loud = findViewById(R.id.sound_loud);
         //라디오가 마지막으로 선택된 값으로 세팅
         small.setChecked(UpdateState("small"));
         mid.setChecked(UpdateState("mid"));
         big.setChecked(UpdateState("big"));
-
+        quiet.setChecked(UpdateState("quiet"));
+        normal.setChecked(UpdateState("normal"));
+        loud.setChecked(UpdateState("loud"));
 
         spref = getSharedPreferences("save", Context.MODE_PRIVATE);
         editor=spref.edit();
@@ -113,6 +119,33 @@ public class settingView extends AppCompatActivity {
                 }
             }
         });
+
+        sound_volume.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if(i == R.id.sound_quiet){
+                    setSoundVolume(20.0F);
+                    radio_BtnSizesave("soundVolume",1F);
+                    radio_BtnStateSave("quiet",true);
+                    radio_BtnStateSave("normal",false);
+                    radio_BtnStateSave("loud",false);
+                }
+                else if(i == R.id.text_mid){
+                    setSoundVolume(40.0F);
+                    radio_BtnSizesave("soundVolume",0.5F);
+                    radio_BtnStateSave("quiet",false);
+                    radio_BtnStateSave("normal",true);
+                    radio_BtnStateSave("loud",false);
+                }
+                else if(i == R.id.text_big){
+                    setSoundVolume(60.0F);
+                    radio_BtnSizesave("soundVolume",0F);
+                    radio_BtnStateSave("quiet",false);
+                    radio_BtnStateSave("normal",false);
+                    radio_BtnStateSave("loud",true);
+                }
+            }
+        });
     }
     private void CheckState(){
         if(lock_scr.isChecked()) {
@@ -155,6 +188,7 @@ public class settingView extends AppCompatActivity {
     void setTextSize(float size){
         textSize = size;
     }
+    void setSoundVolume(float sound) { soundVolume = sound;}
 
 
 }
