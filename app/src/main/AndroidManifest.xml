@@ -25,9 +25,6 @@
             android:name=".TestView.SelectLanguage"
             android:exported="true" />
         <activity
-            android:name=".SelectLanguage"
-            android:exported="true" />
-        <activity
             android:name=".TestView.TestWordChapter"
             android:exported="true" />
         <activity
