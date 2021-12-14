@@ -52,7 +52,7 @@
 
     </LinearLayout>
 
-    <Button
+    <ImageButton
         android:id="@+id/delete"
         android:layout_width="30dp"
         android:layout_height="30dp"

@@ -3,6 +3,7 @@ package com.example.vocabularyproject;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ListView;
@@ -17,19 +18,17 @@ public class privateWordStudyView extends AppCompatActivity {
     ListView listview;
     ArrayList<pW> arr;
     privateWordAdapter adapter;
-    Button delete;
-
+    public static Activity pWSV;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_private_word_study_view);
 
+
         arr = new ArrayList<>();
         String filename = "add.txt";
 
-        File file = new File(getFilesDir(), filename);
-        if (file.exists() == false)
-            return;
+        File file = new File(getFilesDir(), filename); // SQL이 아닌, 내부 저장소 파일 읽고 쓰기를 사용하여 프로그램을 작성해보았다.
 
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));

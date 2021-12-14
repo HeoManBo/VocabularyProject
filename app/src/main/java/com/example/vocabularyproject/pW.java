@@ -1,12 +1,11 @@
 package com.example.vocabularyproject;
 
-
-import android.graphics.drawable.Drawable;
+// 데이터 형식 선언
 
 public class pW {
-    private String word;
-    private String pos;
-    private String mean;
+    public String word;
+    public String pos;
+    public String mean;
 
     public pW(String word, String pos, String mean) {
         this.word = word;
