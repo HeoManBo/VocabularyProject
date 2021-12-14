@@ -37,7 +37,6 @@ public class word_fragment1 extends Fragment implements View.OnClickListener, Te
 
     boolean i = false;
     float size = 20.0F;
-    float speed = 1.5F;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -72,7 +71,6 @@ public class word_fragment1 extends Fragment implements View.OnClickListener, Te
         //글자 크기 조절하는 기능
         shpref = getActivity().getSharedPreferences("text_size",Context.MODE_PRIVATE);
         size = shpref.getFloat("textsize",20.0F);
-        speed = shpref.getFloat("soundSpeed", 1.5F);
         word.setTextSize(size);
         mean.setTextSize(size);
         Example.setTextSize(size);
@@ -88,7 +86,7 @@ public class word_fragment1 extends Fragment implements View.OnClickListener, Te
 
     private void Speak() {
         tts.setPitch(1.0f);
-        tts.setSpeechRate(speed);
+        tts.setSpeechRate(1.0f);
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "id1");
     }
 
@@ -114,7 +112,6 @@ public class word_fragment1 extends Fragment implements View.OnClickListener, Te
         else if(view == star){
            myFavorityDB DB = new myFavorityDB(getActivity());
            SQLiteDatabase sqLiteDatabase = DB.getWritableDatabase();
-            btn_load();
             if(i == false){
                 i = true;
                 star.setBackground(ContextCompat.getDrawable(getActivity(),R.drawable.on));
