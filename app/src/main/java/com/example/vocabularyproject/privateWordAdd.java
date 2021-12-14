@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileWriter;
-
+//dsadsa
 public class privateWordAdd extends AppCompatActivity {
 
     String word; // EditText의 값을 저장할 변수

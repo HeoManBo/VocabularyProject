@@ -1,6 +1,7 @@
 package com.example.vocabularyproject;
 
 // 데이터 형식 선언
+//dsad
 
 public class pW {
     public String word;

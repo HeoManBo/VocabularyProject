@@ -24,10 +24,10 @@ public class settingView extends AppCompatActivity {
     Spinner spinner;
     Switch lock_scr;
     String[] items = {"CHAP01","CHAP02","CHAP03","CHAP04","CHAP05","CHAP06","CHAP07","CHAP08","CHAP09","CHAP10"};
-    RadioGroup text_size, sound_volume;
+    RadioGroup text_size, sound_speed;
     RadioButton small,mid,big;
-    RadioButton quiet, normal, loud;
-    static float textSize, soundVolume;
+    RadioButton slow, normal, fast;
+    static float textSize, soundSpeed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,20 +39,20 @@ public class settingView extends AppCompatActivity {
         select = findViewById(R.id.select);
 
         text_size = findViewById(R.id.text_sizeGruop);
-        sound_volume = findViewById(R.id.sound_volume_group);
+        sound_speed = findViewById(R.id.sound_speed_group);
         small = findViewById(R.id.text_small);
         mid = findViewById(R.id.text_mid);
         big = findViewById(R.id.text_big);
-        quiet = findViewById(R.id.sound_quiet);
+        slow = findViewById(R.id.sound_slow);
         normal = findViewById(R.id.sound_normal);
-        loud = findViewById(R.id.sound_loud);
+        fast = findViewById(R.id.sound_fast);
         //라디오가 마지막으로 선택된 값으로 세팅
         small.setChecked(UpdateState("small"));
         mid.setChecked(UpdateState("mid"));
         big.setChecked(UpdateState("big"));
-        quiet.setChecked(UpdateState("quiet"));
+        slow.setChecked(UpdateState("slow"));
         normal.setChecked(UpdateState("normal"));
-        loud.setChecked(UpdateState("loud"));
+        fast.setChecked(UpdateState("fast"));
 
         spref = getSharedPreferences("save", Context.MODE_PRIVATE);
         editor=spref.edit();
@@ -120,29 +120,29 @@ public class settingView extends AppCompatActivity {
             }
         });
 
-        sound_volume.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        sound_speed.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if(i == R.id.sound_quiet){
-                    setSoundVolume(20.0F);
-                    radio_BtnSizesave("soundVolume",0.0F);
-                    radio_BtnStateSave("quiet",true);
+                if(i == R.id.sound_slow){
+                    setsoundSpeed(20.0F);
+                    radio_BtnSizesave("soundSpeed",0.75F);
+                    radio_BtnStateSave("slow",true);
                     radio_BtnStateSave("normal",false);
-                    radio_BtnStateSave("loud",false);
+                    radio_BtnStateSave("fast",false);
                 }
                 else if(i == R.id.sound_normal){
-                    setSoundVolume(40.0F);
-                    radio_BtnSizesave("soundVolume",1.0F);
-                    radio_BtnStateSave("quiet",false);
+                    setsoundSpeed(40.0F);
+                    radio_BtnSizesave("soundSpeed",1.0F);
+                    radio_BtnStateSave("slow",false);
                     radio_BtnStateSave("normal",true);
-                    radio_BtnStateSave("loud",false);
+                    radio_BtnStateSave("fast",false);
                 }
-                else if(i == R.id.sound_loud){
-                    setSoundVolume(60.0F);
-                    radio_BtnSizesave("soundVolume",2.0F);
-                    radio_BtnStateSave("quiet",false);
+                else if(i == R.id.sound_fast){
+                    setsoundSpeed(60.0F);
+                    radio_BtnSizesave("soundSpeed",1.25F);
+                    radio_BtnStateSave("slow",false);
                     radio_BtnStateSave("normal",false);
-                    radio_BtnStateSave("loud",true);
+                    radio_BtnStateSave("fast",true);
                 }
             }
         });
@@ -188,7 +188,7 @@ public class settingView extends AppCompatActivity {
     void setTextSize(float size){
         textSize = size;
     }
-    void setSoundVolume(float sound) { soundVolume = sound;}
+    void setsoundSpeed(float speed) { soundSpeed = speed;}
 
 
 }

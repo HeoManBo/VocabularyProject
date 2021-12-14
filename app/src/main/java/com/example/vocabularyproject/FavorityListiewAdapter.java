@@ -1,12 +1,8 @@
 package com.example.vocabularyproject;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;

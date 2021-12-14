@@ -84,17 +84,17 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/sound_size"
+        android:id="@+id/sound_speed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="30dp"
         android:paddingTop="100dp"
         android:layout_marginTop="24dp"
-        android:text="소리 조절 버튼"
+        android:text="소리 속도 조절 버튼"
         android:textColor="@color/white"/>
 
     <RadioGroup
-    android:id="@+id/sound_volume_group"
+    android:id="@+id/sound_speed_group"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
@@ -102,10 +102,10 @@
     android:textColor="@color/white">
 
         <RadioButton
-            android:id="@+id/sound_quiet"
+            android:id="@+id/sound_slow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="작게"
+            android:text="느리게"
             android:textColor="@color/white"
             android:buttonTint="@color/white"/>
 
@@ -113,15 +113,15 @@
             android:id="@+id/sound_normal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="중간"
+            android:text="평속"
             android:textColor="@color/white"
             android:buttonTint="@color/white"/>
 
         <RadioButton
-            android:id="@+id/sound_loud"
+            android:id="@+id/sound_fast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="크게"
+            android:text="빠르게"
             android:textColor="@color/white"
             android:buttonTint="@color/white"/>
 
@@ -142,7 +142,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:text="Copyright 2021. Android Soongtudio all rights reserved."
+        android:text="Copyright 2021. AndroidSoongtudio all rights reserved."
         android:textColor="@color/white"/>
 
 

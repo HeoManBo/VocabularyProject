@@ -13,7 +13,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.List;
 
-
+///dsadsa
 public class privateWordAdapter extends BaseAdapter {
     private List<pW> arr; // textview를 채울 값
 
