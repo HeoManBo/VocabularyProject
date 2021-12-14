@@ -1,50 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/fragment_lock_screen_fragment01"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/broad_back">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        />
 
     <TextView
         android:id="@+id/Word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="200dp"
         android:text="영어 단어"
-        android:textColor="@color/white" />
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/mean"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="품사 : 한글 뜻"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
 
     <TextView
         android:id="@+id/Example"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/mean"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="50dp"
+        android:layout_gravity="center"
         android:textColor="@color/white"
         android:text="예문"
-        android:gravity="center" />
+        android:gravity="center"/>
 
     <TextView
-        android:id="@+id/mean"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Word"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="100dp"
-        android:text="품사 : 한글 뜻"
-        android:textColor="@color/white" />
+        android:layout_weight="1"
+        />
 
     <TextView
         android:id="@+id/sentence"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Example"
-        android:layout_centerHorizontal="true"
         android:textColor="@color/white"
+        android:layout_gravity="center"
         android:text="한글 풀이"
         android:gravity="center"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        />
 
-</RelativeLayout>
+
+</LinearLayout>
